@@ -1,16 +1,69 @@
-
 {
   "usuarios": [
-    {"id": "1", "email": "usuario01@email.com", "senha": "1", "senhaRepeticao": "1", "dataCadastro": "2026-09-22T09:30:30Z", "nome": "usuario01"},
-    {"id": "2", "email": "usuario02@email.com", "senha": "1", "senhaRepeticao": "1", "dataCadastro": "2026-09-22T05:20:30Z", "nome": "usuario02"},
-    {"id": "3",  "email": "usuario03@email.com", "senha": "1", "senhaRepeticao": "1", "dataCadastro": "2026-09-15T05:20:30Z", "nome": "usuario03"}
+    {
+      "id": "1",
+      "email": "usuario01@email.com",
+      "senha": "1",
+      "senhaRepeticao": "1",
+      "dataCadastro": "2026-09-22T09:30:30Z",
+      "nome": "usuario01"
+    },
+    {
+      "id": "2",
+      "email": "usuario02@email.com",
+      "senha": "1",
+      "senhaRepeticao": "1",
+      "dataCadastro": "2026-09-22T05:20:30Z",
+      "nome": "usuario02"
+    },
+    {
+      "id": "3",
+      "email": "usuario03@email.com",
+      "senha": "1",
+      "senhaRepeticao": "1",
+      "dataCadastro": "2026-09-15T05:20:30Z",
+      "nome": "usuario03"
+    }
   ],
   "clientes": [
-    { "id": "1", "idClasseExtend": "1", "nomeCompleto": "Nome do usuario01 completo", "cpf": "11111111111", "telefone": "32999999999", "cep": "123456789", "logradouro": "Av. Rio Branco", "numeroResidencial": "123", "complemento": "", "bairro": "Centro", "cidade": "Juiz de Fora", "uf": "MG", "fotoUrl": "ecommerce.jpg", "status": "ativo"},
-    { "id": "2", "idClasseExtend": "2", "nomeCompleto": "Nome do usuario02 completo", "cpf": "21111111112", "telefone": "82999999998", "cep": "987654321", "logradouro": "Av. Presidente Itamar Franco", "numeroResidencial": "321", "complemento": "apt 305", "bairro": "Centro", "cidade": "Juiz de Fora", "uf": "MG", "fotoUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyZ6Hj3_7LQ_1e6qcUu_WXotvT9KoubvrzX9sh5wl2XcuWzabkViBxSYpla-kzbfddqyzxi6_swfvKmVEJBLtgO8OG9uPnmUwia3ZM90avuQ&s=10", "status": "ativo"},
+    {
+      "id": "1",
+      "idClasseExtend": "1",
+      "nomeCompleto": "Nome do usuario01 completo",
+      "cpf": "11111111111",
+      "telefone": "32999999999",
+      "cep": "123456789",
+      "logradouro": "Av. Rio Branco",
+      "numero": "100",
+      "bairro": "Centro",
+      "cidade": "Juiz de Fora",
+      "estado": "MG",
+      "email": "usuario01@email.com"
+    },
+    {
+      "id": "2",
+      "idClasseExtend": "2",
+      "nomeCompleto": "Nome do usuario02 completo",
+      "cpf": "21111111112",
+      "telefone": "82999999998",
+      "cep": "987654321",
+      "logradouro": "Av. Presidente Itamar Franco",
+      "numero": "250",
+      "bairro": "Centro",
+      "cidade": "Maceió",
+      "estado": "AL",
+      "email": "usuario02@email.com"
+    }
   ],
   "empresas": [
-    {"id": "1", "idClasseExtend": "3", "razaoSocial": "Silva & Souza Comércio Textil LTDA", "nomeFantasia": "SS Moda", "cnpj":"12345678910112", "inscricaoEstadua":""}
+    {
+      "id": "1",
+      "idClasseExtend": "3",
+      "razaoSocial": "Silva & Souza Comércio Textil LTDA",
+      "nomeFantasia": "SS Moda",
+      "cnpj": "12345678910112",
+      "inscricaoEstadua": ""
+    }
   ],
   "cursos": [
     { "id": 1, "nome": "Curso 1", "idCoordenador": 1 },
