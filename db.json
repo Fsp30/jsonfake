@@ -1,68 +1,37 @@
 {
   "usuarios": [
-    {
-      "id": "1",
-      "email": "usuario01@email.com",
-      "senha": "1",
-      "senhaRepeticao": "1",
-      "dataCadastro": "2026-09-22T09:30:30Z",
-      "nome": "usuario01"
-    },
-    {
-      "id": "2",
-      "email": "usuario02@email.com",
-      "senha": "1",
-      "senhaRepeticao": "1",
-      "dataCadastro": "2026-09-22T05:20:30Z",
-      "nome": "usuario02"
-    },
-    {
-      "id": "3",
-      "email": "usuario03@email.com",
-      "senha": "1",
-      "senhaRepeticao": "1",
-      "dataCadastro": "2026-09-15T05:20:30Z",
-      "nome": "usuario03"
-    }
+    { "id": 1, "nome": "Usuario01", "email": "usuario01@email.com", "senhaHash": "123", "dataCadastro": "2026-09-20" },
+    { "id": 2, "nome": "Usuario02", "email": "usuario02@email.com", "senhaHash": "123", "dataCadastro": "2026-09-20" },
+    { "id": 3, "nome": "Usuario03", "email": "usuario03@email.com", "senhaHash": "123", "dataCadastro": "2026-09-20" },
+    { "id": 4, "nome": "Usuario04", "email": "usuario04@email.com", "senhaHash": "123", "dataCadastro": "2026-09-20" },
+    { "id": 5, "nome": "Usuario05", "email": "usuario05@email.com", "senhaHash": "123", "dataCadastro": "2026-09-20" }
   ],
   "clientes": [
-    {
-      "id": "1",
-      "idClasseExtend": "1",
-      "nomeCompleto": "Nome do usuario01 completo",
-      "cpf": "11111111111",
-      "telefone": "32999999999",
-      "cep": "123456789",
-      "logradouro": "Av. Rio Branco",
-      "numero": "100",
-      "bairro": "Centro",
-      "cidade": "Juiz de Fora",
-      "estado": "MG",
-      "email": "usuario01@email.com"
-    },
-    {
-      "id": "2",
-      "idClasseExtend": "2",
-      "nomeCompleto": "Nome do usuario02 completo",
-      "cpf": "21111111112",
-      "telefone": "82999999998",
-      "cep": "987654321",
-      "logradouro": "Av. Presidente Itamar Franco",
-      "numero": "250",
-      "bairro": "Centro",
-      "cidade": "Maceió",
-      "estado": "AL",
-      "email": "usuario02@email.com"
-    }
+    { "id": 1, "idUsuario": 1, "nomeCompleto": "Usuario01", "cpf": "11111111111", "telefone": "32999999999", "logradouro": "Rua A", "cep": "36000000", "numeroResidencial": "10", "complemento": "Casa", "bairro": "Centro", "cidade": "Juiz de Fora", "uf": "MG", "fotoUrl": "url1.jpg", "status": "ATIVO" },
+    { "id": 2, "idUsuario": 2, "nomeCompleto": "Usuario02", "cpf": "22222222222", "telefone": "32888888888", "logradouro": "Rua B", "cep": "36000111", "numeroResidencial": "20", "complemento": "Apto", "bairro": "Centro", "cidade": "Juiz de Fora", "uf": "MG", "fotoUrl": "url2.jpg", "status": "ATIVO" },
+    { "id": 3, "idUsuario": 3, "nomeCompleto": "Usuario03", "cpf": "33333333333", "telefone": "32777777777", "logradouro": "Rua C", "cep": "36000222", "numeroResidencial": "30", "complemento": "Casa", "bairro": "Centro", "cidade": "Juiz de Fora", "uf": "MG", "fotoUrl": "url3.jpg", "status": "ATIVO" },
+    { "id": 4, "idUsuario": 4, "nomeCompleto": "Usuario04", "cpf": "44444444444", "telefone": "32666666666", "logradouro": "Rua D", "cep": "36000333", "numeroResidencial": "40", "complemento": "Casa", "bairro": "Centro", "cidade": "Juiz de Fora", "uf": "MG", "fotoUrl": "url4.jpg", "status": "ATIVO" },
+    { "id": 5, "idUsuario": 5, "nomeCompleto": "Usuario05", "cpf": "55555555555", "telefone": "32555555555", "logradouro": "Rua E", "cep": "36000444", "numeroResidencial": "50", "complemento": "Casa", "bairro": "Centro", "cidade": "Juiz de Fora", "uf": "MG", "fotoUrl": "url5.jpg", "status": "ATIVO" }
   ],
-  "empresas": [
-    {
-      "id": "1",
-      "idClasseExtend": "3",
-      "razaoSocial": "Silva & Souza Comércio Textil LTDA",
-      "nomeFantasia": "SS Moda",
-      "cnpj": "12345678910112",
-      "inscricaoEstadua": ""
-    }
+  "produtos": [
+    { "id": 1, "empresa": 1, "titulo": "Xeon E5 2699 v3", "descricao": "Kit Placa Mae", "preco": 850.00, "precoPromocional": null, "dataPromocaoInicio": null, "dataPromocaoFim": null, "custo": 600.00, "estoqueQuantidade": 15, "estoqueReservado": 0, "condicao": "NOVO", "freteGratis": true, "status": "ATIVO", "fotos": ["img1.jpg"], "notaMedia": 5.0, "percentualRecomendacao": 100.0, "dataCadastro": "2026-09-20" },
+    { "id": 2, "empresa": 1, "titulo": "RTX 4060 8GB", "descricao": "Placa de Video", "preco": 3200.00, "precoPromocional": 3000.00, "dataPromocaoInicio": "2026-09-20", "dataPromocaoFim": "2026-09-30", "custo": 2500.00, "estoqueQuantidade": 5, "estoqueReservado": 1, "condicao": "NOVO", "freteGratis": false, "status": "ATIVO", "fotos": ["img2.jpg"], "notaMedia": 4.8, "percentualRecomendacao": 95.0, "dataCadastro": "2026-09-20" },
+    { "id": 3, "empresa": 2, "titulo": "Camisa Flamengo", "descricao": "Oficial 2026", "preco": 350.00, "precoPromocional": null, "dataPromocaoInicio": null, "dataPromocaoFim": null, "custo": 150.00, "estoqueQuantidade": 40, "estoqueReservado": 5, "condicao": "NOVO", "freteGratis": true, "status": "ATIVO", "fotos": ["img3.jpg"], "notaMedia": 4.9, "percentualRecomendacao": 98.0, "dataCadastro": "2026-09-20" },
+    { "id": 4, "empresa": 2, "titulo": "GBA Lite", "descricao": "Console Portatil", "preco": 450.00, "precoPromocional": null, "dataPromocaoInicio": null, "dataPromocaoFim": null, "custo": 200.00, "estoqueQuantidade": 8, "estoqueReservado": 0, "condicao": "NOVO", "freteGratis": false, "status": "ATIVO", "fotos": ["img4.jpg"], "notaMedia": 4.5, "percentualRecomendacao": 90.0, "dataCadastro": "2026-09-20" },
+    { "id": 5, "empresa": 3, "titulo": "Bola Oficial", "descricao": "Bola de Campo", "preco": 120.00, "precoPromocional": null, "dataPromocaoInicio": null, "dataPromocaoFim": null, "custo": 50.00, "estoqueQuantidade": 25, "estoqueReservado": 2, "condicao": "NOVO", "freteGratis": false, "status": "ATIVO", "fotos": ["img5.jpg"], "notaMedia": 4.7, "percentualRecomendacao": 92.0, "dataCadastro": "2026-09-20" }
   ],
+  "carrinhos": [
+    { "id": 1, "idCliente": 1 },
+    { "id": 2, "idCliente": 2 },
+    { "id": 3, "idCliente": 3 },
+    { "id": 4, "idCliente": 4 },
+    { "id": 5, "idCliente": 5 }
+  ],
+  "itensCarrinho": [
+    { "id": 1, "idCarrinho": 1, "idProduto": 1, "quantidade": 1 },
+    { "id": 2, "idCarrinho": 2, "idProduto": 2, "quantidade": 2 },
+    { "id": 3, "idCarrinho": 3, "idProduto": 3, "quantidade": 1 },
+    { "id": 4, "idCarrinho": 4, "idProduto": 4, "quantidade": 1 },
+    { "id": 5, "idCarrinho": 5, "idProduto": 5, "quantidade": 3 }
+  ]
 }
