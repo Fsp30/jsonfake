@@ -1,21 +1,13 @@
 {
-  "name": "jsonfake",
+  "name": "jsonfake-server",
   "version": "1.0.0",
-  "description": "https://my-json-server.typicode.com/fsp30/jsonfake",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "dev": "node --watch server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Fsp30/jsonfake.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Fsp30/jsonfake/issues"
-  },
-  "homepage": "https://github.com/Fsp30/jsonfake#readme"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
 }
