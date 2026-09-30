@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jsonfake</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EBEFEC; --panel:#FFFFFF; --ink:#12201C; --muted:#5B6B65; --line:#D3DBD6;
+  --accent:#0F7B6C; --accent-ink:#FFFFFF; --soft:#DCEDE8; --warn:#B3261E; --warn-soft:#F8E1DF;
+  --key:#0F5E8C; --str:#0F7B6C; --num:#9A4B00;
+  --ui:'Schibsted Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#0E1512; --panel:#151F1B; --ink:#E6EEEA; --muted:#8FA198; --line:#26332D;
+    --accent:#3DB9A2; --accent-ink:#06211B; --soft:#1B2C26; --warn:#F0837B; --warn-soft:#3A1F1D;
+    --key:#7CC0EA; --str:#6FD1BD; --num:#E9A35C;
+  }
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 15px/1.5 var(--ui)}
+button,input,select{font:inherit;color:inherit}
+button{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.app{display:grid;grid-template-columns:272px minmax(0,1fr);min-height:100vh}
+
+/* lateral */
+.side{border-right:1px solid var(--line);padding:24px 16px;display:flex;flex-direction:column;gap:20px;position:sticky;top:0;height:100vh;overflow:auto}
+.brand{margin:0;font:700 26px/1 var(--ui);letter-spacing:-.02em}
+.tag{margin:6px 0 0;color:var(--muted);font-size:13px}
+.base{border-top:1px solid var(--line)}
+.bhead{width:100%;display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px 4px;background:none;border:0;text-align:left;font-weight:700}
+.bhead .c{font-weight:400;color:var(--muted);font-size:13px}
+.bhead::before{content:'';width:0;height:0;border:5px solid transparent;border-left-color:var(--muted);margin-right:2px;transition:transform .12s}
+.bhead[aria-expanded=true]::before{transform:rotate(90deg) translateX(2px)}
+.bhead .n{flex:1}
+.base ul{list-style:none;margin:0 0 10px;padding:0}
+.res{width:100%;display:flex;justify-content:space-between;gap:8px;padding:6px 10px 6px 18px;background:none;border:0;border-left:3px solid transparent;border-radius:0 4px 4px 0;text-align:left;font-family:var(--mono);font-size:13px}
+.res:hover{background:var(--soft)}
+.res.on{background:var(--soft);border-left-color:var(--accent);font-weight:600}
+.res .n{color:var(--muted);font-variant-numeric:tabular-nums}
+.dim{color:var(--muted);font-size:13px;margin:4px 4px 10px}
+.bad{color:var(--warn);font-size:13px;margin:4px 4px 10px}
+.help{margin-top:auto;border-top:1px solid var(--line);padding-top:12px;font-size:13px}
+.help summary{cursor:pointer;font-weight:700}
+.help ol{padding-left:18px;margin:10px 0}
+.help code,.try code{font-family:var(--mono);font-size:12px;background:var(--soft);padding:1px 5px;border-radius:3px}
+.help dl{margin:8px 0 0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px}
+.help dt{font-family:var(--mono);font-size:12px}
+.help dd{margin:0;color:var(--muted)}
+
+/* principal */
+main{padding:24px 32px 40px;min-width:0}
+.bar{display:flex;border:2px solid var(--ink);border-radius:8px;background:var(--panel);overflow:hidden}
+.method{display:grid;place-items:center;padding:0 18px;background:var(--ink);color:var(--bg);font:600 15px var(--mono);letter-spacing:.04em}
+#path{flex:1;min-width:0;border:0;background:none;padding:15px 16px;font:500 16px var(--mono)}
+#path:focus-visible{outline:none}
+.bar:focus-within{box-shadow:0 0 0 3px var(--soft),0 0 0 5px var(--accent)}
+.bar button{border:0;border-left:2px solid var(--ink);padding:0 18px;font-weight:700;background:var(--panel)}
+.bar button.go{background:var(--accent);color:var(--accent-ink)}
+.bar button:hover{filter:brightness(.95)}
+.tools{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:16px 0 12px}
+.tools label{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:13px}
+.tools input,.tools select{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:7px 10px;color:var(--ink)}
+.tools input[type=search]{width:min(320px,100%)}
+.tabs{margin-left:auto;display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.tabs button{background:var(--panel);border:0;padding:7px 14px}
+.tabs button[aria-selected=true]{background:var(--ink);color:var(--bg)}
+.meta{display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center;min-height:28px;color:var(--muted);font-size:13px;margin-bottom:8px}
+.pill{font:600 12px var(--mono);padding:2px 8px;border-radius:99px;background:var(--soft);color:var(--accent)}
+.pill.err{background:var(--warn-soft);color:var(--warn)}
+.sheet{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:auto;max-height:calc(100vh - 290px);min-height:160px}
+table{border-collapse:collapse;width:100%;font-size:14px}
+th,td{padding:8px 14px;text-align:left;white-space:nowrap;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{position:sticky;top:0;background:var(--panel);z-index:1;padding:0;box-shadow:0 1px 0 var(--line)}
+th button{all:unset;cursor:pointer;display:flex;gap:6px;padding:10px 14px;font:600 13px var(--mono);width:100%}
+th button:hover{background:var(--soft)}
+th button:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
+th[aria-sort=ascending] i::after{content:'↑'}
+th[aria-sort=descending] i::after{content:'↓'}
+tbody tr:hover{background:var(--soft)}
+tbody tr:last-child td{border-bottom:0}
+td.k{font:600 13px var(--mono);color:var(--muted);width:1%}
+.num{font-variant-numeric:tabular-nums}
+.nil{color:var(--muted)}
+.bool{font:500 12px var(--mono);padding:1px 7px;border-radius:99px;border:1px solid var(--line)}
+.bool.true{color:var(--accent);border-color:var(--accent)}
+code.obj{font:12px var(--mono);color:var(--muted)}
+td a{color:var(--accent);font:600 13px var(--mono)}
+pre{margin:0;padding:16px 18px;font:13px/1.55 var(--mono);white-space:pre-wrap;word-break:break-word}
+pre.mini{padding:0;font-size:12px}
+.jk{color:var(--key)}.js{color:var(--str)}.jn{color:var(--num)}.jl{color:var(--muted)}
+.pager{display:flex;gap:10px;align-items:center;margin-top:12px;color:var(--muted);font-size:13px}
+.pager button{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px 14px}
+.pager button:disabled{opacity:.45;cursor:default}
+.pager .sp{flex:1}
+.note{padding:28px 24px}
+.note h2{margin:0 0 6px;font-size:20px;letter-spacing:-.01em}
+.note p{margin:0 0 10px;color:var(--muted);max-width:62ch}
+.note.err h2{color:var(--warn)}
+.try{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px}
+.try a{font:500 14px var(--mono);color:var(--accent);text-decoration:none}
+.try a:hover{text-decoration:underline}
+.try span{color:var(--muted);font-size:13px;margin-left:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.chips a{font:500 13px var(--mono);border:1px solid var(--line);border-radius:99px;padding:3px 12px;color:var(--accent);text-decoration:none}
+[hidden]{display:none!important}
+@media (max-width:860px){
+  .app{grid-template-columns:1fr}
+  .side{position:static;height:auto;border-right:0;border-bottom:1px solid var(--line)}
+  .help{margin-top:0}
+  main{padding:16px}
+  .sheet{max-height:none}
+  .tabs{margin-left:0}
+}
+</style>
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div>
+      <h1 class="brand">jsonfake</h1>
+      <p class="tag">Arquivos JSON servidos como API REST, só leitura.</p>
+    </div>
+    <nav id="bases" aria-label="Bases e recursos"></nav>
+    <details class="help">
+      <summary>Como adicionar uma base</summary>
+      <ol>
+        <li>Crie <code>db/nome.json</code> no repositório.</li>
+        <li>Use um objeto na raiz, com arrays de objetos que tenham <code>id</code>.</li>
+        <li>Faça commit e deploy. A rota <code>/nome/recurso</code> aparece aqui.</li>
+      </ol>
+      <p>Parâmetros de consulta:</p>
+      <dl>
+        <dt>campo=valor</dt><dd>filtra</dd>
+        <dt>campo_gte</dt><dd>maior ou igual</dd>
+        <dt>campo_lte</dt><dd>menor ou igual</dd>
+        <dt>campo_ne</dt><dd>diferente</dd>
+        <dt>campo_like</dt><dd>contém o texto</dd>
+        <dt>q</dt><dd>busca em tudo</dd>
+        <dt>_sort, _order</dt><dd>ordena</dd>
+        <dt>_page, _limit</dt><dd>pagina</dd>
+      </dl>
+    </details>
+  </aside>
+
+  <main>
+    <form id="bar" class="bar" autocomplete="off">
+      <span class="method">GET</span>
+      <input id="path" spellcheck="false" placeholder="/base/recurso?_limit=10" aria-label="Caminho da requisição">
+      <button type="button" id="copy">Copiar URL</button>
+      <button type="submit" class="go">Enviar</button>
+    </form>
+
+    <div class="tools" id="tools" hidden>
+      <label>Buscar <input id="q" type="search" placeholder="em todos os campos"></label>
+      <label>Por página
+        <select id="limit"><option>10</option><option selected>25</option><option>50</option><option>100</option></select>
+      </label>
+      <div class="tabs" role="tablist" aria-label="Formato">
+        <button role="tab" data-view="table" aria-selected="true">Tabela</button>
+        <button role="tab" data-view="json" aria-selected="false">JSON</button>
+      </div>
+    </div>
+
+    <div class="meta" id="meta" aria-live="polite"></div>
+    <section class="sheet" id="out" aria-label="Resposta"></section>
+    <div class="pager" id="pager"></div>
+  </main>
+</div>
+
+<script>
+const $ = (s, r = document) => r.querySelector(s);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const RESERVED = ['_page','_limit','_sort','_order','_start','_end','q'];
+
+const state = { db:null, res:null, id:null, child:null, q:'', sort:'', order:'asc',
+                page:1, limit:25, paged:false, extra:new URLSearchParams(), view:'table' };
+let bases = [], resCache = {}, expanded = new Set(), last = null, seq = 0, timer;
+
+/* ---------- caminho <-> estado ---------- */
+function buildPath() {
+  const segs = [state.db, state.res, state.id, state.child].filter(Boolean);
+  if (!segs.length) return '';
+  const p = new URLSearchParams(state.extra);
+  if (state.res && (!state.id || state.child)) {
+    if (state.q) p.set('q', state.q);
+    if (state.sort) { p.set('_sort', state.sort); p.set('_order', state.order); }
+    p.set('_page', state.page); p.set('_limit', state.limit);
+  }
+  const qs = p.toString();
+  return '/' + segs.map(encodeURIComponent).join('/') + (qs ? '?' + qs : '');
+}
+
+function readHash() {
+  const h = location.hash.slice(1);
+  try { return decodeURIComponent(h); } catch { return h; }
+}
+
+function nav(path) {
+  if (readHash() !== path) history.pushState(null, '', '#' + path);
+  applyPath(path);
+}
+
+function applyPath(pathStr) {
+  const u = new URL(pathStr || '/', location.origin);
+  const segs = u.pathname.split('/').filter(Boolean).map(s => { try { return decodeURIComponent(s); } catch { return s; } });
+  Object.assign(state, { db: segs[0] || null, res: segs[1] || null, id: segs[2] || null, child: segs[3] || null });
+  const p = u.searchParams;
+  state.q = p.get('q') || '';
+  state.sort = p.get('_sort') || '';
+  state.order = p.get('_order') === 'desc' ? 'desc' : 'asc';
+  state.page = Number(p.get('_page')) || 1;
+  state.paged = p.has('_limit') || p.has('_page');
+  if (p.has('_limit')) state.limit = Number(p.get('_limit')) || 25;
+  state.extra = new URLSearchParams();
+  for (const [k, v] of p) if (!RESERVED.includes(k)) state.extra.append(k, v);
+
+  if (state.db) { expanded.add(state.db); ensureRes(state.db); }
+  $('#q').value = state.q;
+  $('#limit').value = String(state.limit);
+  renderSide();
+  if (!segs.length) { last = null; $('#path').value = ''; render(); return; }
+  const path = u.pathname + u.search;
+  $('#path').value = path;
+  run(path);
+}
+
+/* ---------- rede ---------- */
+async function run(path) {
+  const my = ++seq;
+  $('#meta').textContent = 'Carregando…';
+  const t = performance.now();
+  let res;
+  try {
+    const r = await fetch(path, { headers: { Accept: 'application/json' } });
+    const text = await r.text();
+    let data; try { data = JSON.parse(text); } catch { data = text; }
+    res = { path, status: r.status, ok: r.ok, ms: Math.round(performance.now() - t),
+            bytes: new Blob([text]).size, total: r.headers.get('X-Total-Count'), data };
+  } catch (e) {
+    res = { path, status: 0, ok: false, error: e.message };
+  }
+  if (my !== seq) return;
+  last = res;
+  render();
+}
+
+async function ensureRes(db) {
+  if (resCache[db]) return;
+  resCache[db] = 'loading';
+  try {
+    const r = await fetch('/' + encodeURIComponent(db), { headers: { Accept: 'application/json' } });
+    resCache[db] = r.ok ? await r.json() : {};
+  } catch { resCache[db] = {}; }
+  renderSide();
+  if (!last) render();
+}
+
+async function loadBases() {
+  try {
+    const r = await fetch('/', { headers: { Accept: 'application/json' } });
+    bases = await r.json();
+  } catch { bases = []; }
+  if (!Array.isArray(bases)) bases = [];
+  const start = readHash();
+  if (!start && bases[0]) { expanded.add(bases[0].nome); ensureRes(bases[0].nome); }
+  renderSide();
+  applyPath(start);
+}
+
+/* ---------- lateral ---------- */
+function renderSide() {
+  if (!bases.length) {
+    $('#bases').innerHTML = '<p class="dim">Nenhuma base encontrada. Adicione um arquivo .json na pasta db/.</p>';
+    return;
+  }
+  $('#bases').innerHTML = bases.map(b => {
+    const open = expanded.has(b.nome), rs = resCache[b.nome];
+    let inner = '';
+    if (open) {
+      if (b.status !== 'OK') inner = `<p class="bad">JSON inválido: ${esc(b.detalhe || '')}</p>`;
+      else if (!rs || rs === 'loading') inner = '<p class="dim">Carregando…</p>';
+      else inner = '<ul>' + Object.entries(rs).map(([n, v]) =>
+        `<li><button class="res${state.db === b.nome && state.res === n ? ' on' : ''}" data-db="${esc(b.nome)}" data-res="${esc(n)}"><span>${esc(n)}</span><span class="n">${v.total}</span></button></li>`).join('') + '</ul>';
+    }
+    const count = b.status === 'OK' ? `${b.recursos} recursos` : 'com erro';
+    return `<div class="base"><button class="bhead" data-base="${esc(b.nome)}" aria-expanded="${open}"><span class="n">${esc(b.nome)}</span><span class="c">${count}</span></button>${inner}</div>`;
+  }).join('');
+}
+
+/* ---------- resposta ---------- */
+function cell(v) {
+  if (v === null || v === undefined || v === '') return '<span class="nil">—</span>';
+  if (typeof v === 'object') {
+    const s = JSON.stringify(v);
+    return `<code class="obj" title="${esc(s)}">${esc(s.length > 48 ? s.slice(0, 47) + '…' : s)}</code>`;
+  }
+  if (typeof v === 'boolean') return `<span class="bool ${v}">${v}</span>`;
+  if (typeof v === 'number') return `<span class="num">${v}</span>`;
+  return esc(v);
+}
+
+function hl(json) {
+  const re = /("(?:\\.|[^"\\])*")(\s*:)?|\b(true|false|null)\b|-?\d+\.?\d*(?:[eE][+-]?\d+)?/g;
+  let out = '', i = 0, m;
+  while ((m = re.exec(json))) {
+    out += esc(json.slice(i, m.index));
+    const cls = m[1] ? (m[2] ? 'jk' : 'js') : m[3] ? 'jl' : 'jn';
+    out += `<span class="${cls}">${esc(m[0])}</span>`;
+    i = re.lastIndex;
+  }
+  return out + esc(json.slice(i));
+}
+
+function tableHtml(rows) {
+  if (!rows.length) return '<div class="note"><h2>Nenhum registro</h2><p>Nada corresponde a essa busca ou a esses filtros. Limpe o campo de busca ou ajuste o caminho.</p></div>';
+  const cols = [];
+  for (const r of rows.slice(0, 100)) if (r && typeof r === 'object') for (const k of Object.keys(r)) if (!cols.includes(k)) cols.push(k);
+  if (!cols.length) return `<pre>${hl(JSON.stringify(rows, null, 2))}</pre>`;
+  const target = state.child || state.res;
+  const head = cols.map(c => {
+    const on = state.sort === c;
+    return `<th aria-sort="${on ? (state.order === 'desc' ? 'descending' : 'ascending') : 'none'}"><button data-sort="${esc(c)}">${esc(c)}<i></i></button></th>`;
+  }).join('');
+  const body = rows.map(r => '<tr>' + cols.map(c => {
+    const v = r[c];
+    if (c === 'id' && state.db && target && (!state.id || state.child)) {
+      const href = `/${encodeURIComponent(state.db)}/${encodeURIComponent(target)}/${encodeURIComponent(v)}`;
+      return `<td><a href="#${esc(href)}" data-go="${esc(href)}">${esc(v)}</a></td>`;
+    }
+    return `<td>${cell(v)}</td>`;
+  }).join('') + '</tr>').join('');
+  return `<table><thead><tr>${head}</tr></thead><tbody>${body}</tbody></table>`;
+}
+
+function kvHtml(obj) {
+  const rows = Object.entries(obj).map(([k, v]) => {
+    let val = cell(v);
+    if (v && typeof v === 'object') val = `<pre class="mini">${hl(JSON.stringify(v, null, 2))}</pre>`;
+    return `<tr><td class="k">${esc(k)}</td><td style="white-space:normal">${val}</td></tr>`;
+  }).join('');
+  return `<table><tbody>${rows}</tbody></table>`;
+}
+
+function emptyHtml() {
+  const b = bases.find(x => x.status === 'OK' && resCache[x.nome] && resCache[x.nome] !== 'loading' && Object.keys(resCache[x.nome]).length);
+  let tries = '';
+  if (b) {
+    const r = Object.keys(resCache[b.nome])[0];
+    const ex = [
+      [`/${b.nome}/${r}`, 'lista completa'],
+      [`/${b.nome}/${r}?_limit=3&_sort=id&_order=desc`, 'os 3 últimos por id'],
+      [`/${b.nome}/${r}/1`, 'um item pelo id']
+    ];
+    tries = '<ul class="try">' + ex.map(([p, d]) => `<li><a href="#${esc(p)}" data-go="${esc(p)}">${esc(p)}</a><span>${d}</span></li>`).join('') + '</ul>';
+  }
+  return `<div class="note"><h2>Escolha um recurso</h2><p>Clique em um recurso na lateral ou digite um caminho na barra acima e pressione Enter. A barra mostra sempre a rota exata que você pode usar no seu código.</p>${tries}</div>`;
+}
+
+function errorHtml() {
+  const d = last.data;
+  if (last.error) return `<div class="note err"><h2>Sem resposta do servidor</h2><p>${esc(last.error)}</p></div>`;
+  const msg = d && d.error ? d.error : `Erro ${last.status}`;
+  let extra = '';
+  if (d && d.detalhe) extra += `<p>${esc(d.detalhe)}</p>`;
+  if (d && Array.isArray(d.disponiveis) && d.disponiveis.length)
+    extra += '<p>Bases disponíveis:</p><div class="chips">' + d.disponiveis.map(n => `<a href="#/${esc(n)}" data-go="/${esc(n)}">${esc(n)}</a>`).join('') + '</div>';
+  return `<div class="note err"><h2>${esc(msg)}</h2>${extra}</div>`;
+}
+
+function render() {
+  const out = $('#out'), tools = $('#tools');
+  document.querySelectorAll('.tabs button').forEach(b => b.setAttribute('aria-selected', String(b.dataset.view === state.view)));
+  if (!last) {
+    tools.hidden = true; $('#meta').innerHTML = ''; $('#pager').innerHTML = '';
+    out.innerHTML = emptyHtml();
+    return;
+  }
+  const data = last.data, isList = Array.isArray(data) && last.ok;
+  tools.hidden = !last.ok;
+  $('#q').closest('label').hidden = !isList;
+  $('#limit').closest('label').hidden = !isList;
+
+  const size = last.bytes > 1024 ? (last.bytes / 1024).toFixed(1).replace('.', ',') + ' kB' : (last.bytes || 0) + ' B';
+  let count = '';
+  if (last.ok && isList) count = `<span>${last.total ?? data.length} registros</span>`;
+  $('#meta').innerHTML = `<span class="pill${last.ok ? '' : ' err'}">${last.status || 'sem resposta'}</span>` +
+    (last.ms != null ? `<span>${last.ms} ms</span><span>${size}</span>` : '') + count;
+
+  if (!last.ok) { out.innerHTML = errorHtml(); $('#pager').innerHTML = ''; return; }
+  if (state.view === 'json' || typeof data !== 'object' || data === null) {
+    out.innerHTML = `<pre>${hl(typeof data === 'string' ? JSON.stringify(data) : JSON.stringify(data, null, 2))}</pre>`;
+  } else {
+    out.innerHTML = isList ? tableHtml(data) : kvHtml(data);
+  }
+
+  const total = Number(last.total);
+  if (isList && state.paged && Number.isFinite(total)) {
+    const from = total ? (state.page - 1) * state.limit + 1 : 0;
+    const to = Math.min(state.page * state.limit, total);
+    $('#pager').innerHTML = `<span>${from}–${to} de ${total}</span><span class="sp"></span>` +
+      `<button data-page="-1" ${state.page <= 1 ? 'disabled' : ''}>Anterior</button>` +
+      `<button data-page="1" ${to >= total ? 'disabled' : ''}>Próxima</button>`;
+  } else $('#pager').innerHTML = '';
+}
+
+/* ---------- eventos ---------- */
+document.addEventListener('click', e => {
+  const go = e.target.closest('[data-go]');
+  if (go) { e.preventDefault(); nav(go.dataset.go); return; }
+
+  const res = e.target.closest('.res');
+  if (res) {
+    Object.assign(state, { db: res.dataset.db, res: res.dataset.res, id: null, child: null,
+                           q: '', sort: '', order: 'asc', page: 1, extra: new URLSearchParams() });
+    nav(buildPath()); return;
+  }
+  const base = e.target.closest('.bhead');
+  if (base) {
+    const n = base.dataset.base;
+    expanded.has(n) ? expanded.delete(n) : (expanded.add(n), ensureRes(n));
+    renderSide(); return;
+  }
+  const sort = e.target.closest('[data-sort]');
+  if (sort) {
+    const c = sort.dataset.sort;
+    state.order = state.sort === c && state.order === 'asc' ? 'desc' : 'asc';
+    state.sort = c; state.page = 1; nav(buildPath()); return;
+  }
+  const pg = e.target.closest('[data-page]');
+  if (pg) { state.page = Math.max(1, state.page + Number(pg.dataset.page)); nav(buildPath()); return; }
+
+  const tab = e.target.closest('.tabs button');
+  if (tab) { state.view = tab.dataset.view; render(); }
+});
+
+$('#bar').addEventListener('submit', e => {
+  e.preventDefault();
+  let v = $('#path').value.trim();
+  if (v.startsWith(location.origin)) v = v.slice(location.origin.length);
+  if (v && !v.startsWith('/')) v = '/' + v;
+  nav(v);
+});
+
+$('#copy').addEventListener('click', async () => {
+  const btn = $('#copy'), url = location.origin + $('#path').value;
+  try { await navigator.clipboard.writeText(url); btn.textContent = 'Copiado'; }
+  catch { $('#path').select(); btn.textContent = 'Selecione e copie'; }
+  setTimeout(() => btn.textContent = 'Copiar URL', 1600);
+});
+
+$('#q').addEventListener('input', e => {
+  clearTimeout(timer);
+  timer = setTimeout(() => { state.q = e.target.value.trim(); state.page = 1; nav(buildPath()); }, 300);
+});
+$('#limit').addEventListener('change', e => { state.limit = Number(e.target.value); state.page = 1; nav(buildPath()); });
+window.addEventListener('popstate', () => applyPath(readHash()));
+
+loadBases();
+</script>
+</body>
+</html>

@@ -74,7 +74,7 @@
     { "id": 1, "idCliente": 1, "numeroHash": "hash_4111********1111", "paymentToken": "tok_a1b2c3", "bandeira": "VISA", "nomeTitular": "USUARIO01", "validadeMes": 12, "validadeAno": 2029, "apelido": "Cartão Principal", "status": "ATIVO" },
     { "id": 2, "idCliente": 2, "numeroHash": "hash_5500********0004", "paymentToken": "tok_d4e5f6", "bandeira": "MASTERCARD", "nomeTitular": "USUARIO02", "validadeMes": 6, "validadeAno": 2028, "apelido": "Cartão do Trabalho", "status": "ATIVO" },
     { "id": 3, "idCliente": 3, "numeroHash": "hash_4000********0002", "paymentToken": "tok_g7h8i9", "bandeira": "VISA", "nomeTitular": "USUARIO03", "validadeMes": 3, "validadeAno": 2027, "apelido": "", "status": "ATIVO" }
-  ],
+  ],	
 
   "pedidos": [
     { "id": 1, "idCliente": 1, "enderecoEntrega": { "logradouro": "Rua A", "cep": "36000000", "numeroResidencial": "10", "complemento": "Casa", "bairro": "Centro", "cidade": "Juiz de Fora", "uf": "MG" }, "subtotalGeral": 1300.00, "freteGeral": 25.00, "totalGeral": 1325.00, "dataPedido": "2026-09-25" },
