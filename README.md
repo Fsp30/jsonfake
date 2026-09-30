@@ -23,13 +23,20 @@ API REST somente leitura (GET) gerada a partir de arquivos JSON.
 
 Query params: `?campo=v`, `campo_gte`, `campo_lte`, `campo_ne`, `campo_like`, `q`, `_sort`, `_order`, `_page`, `_limit` (total em `X-Total-Count`).
 
+Exemplo:
+
+    fetch('https://jsonfake-etv6.onrender.com/ecommerce/produtos')
+      .then(r => r.json())
+      .then(console.log)
+
 ## Rodar
 ```bash
 npm install
 npm start
 ```
 
-## Interface
 
-Abra a raiz do servidor no navegador: lista as bases e os recursos, mostra a resposta em tabela ou JSON, e a barra de requisição exibe a rota exata para usar no código. O endereço da página (`/#/ecommerce/produtos?_limit=5`) pode ser compartilhado.
+**Interface:** https://jsonfake-etv6.onrender.com
 
+> O serviço roda no plano gratuito e hiberna sem uso: a primeira requisição pode levar alguns segundos.
+> Use apenas dados fictícios nas bases.
