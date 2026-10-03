@@ -1,0 +1,99 @@
+{
+    "categorias": [
+        { "id": 1, "nome": "SUV" },
+        { "id": 2, "nome": "Sedã" },
+        { "id": 3, "nome": "Hatch" },
+        { "id": 4, "nome": "Picape" }
+    ],
+    "caracteristicas": [
+        { "id": 1, "nome": "Ar condicionado" },
+        { "id": 2, "nome": "Direção hidráulica" },
+        { "id": 3, "nome": "Vidros elétricos" },
+        { "id": 4, "nome": "Trava elétrica" },
+        { "id": 5, "nome": "Airbag" },
+        { "id": 6, "nome": "Freios ABS" },
+        { "id": 7, "nome": "Câmbio automático" },
+        { "id": 8, "nome": "Central multimídia" },
+        { "id": 9, "nome": "Sensor de estacionamento" },
+        { "id": 10, "nome": "Câmera de ré" }
+    ],
+    "marcas": [
+        { "id": 1, "nome": "Toyota" },
+        { "id": 2, "nome": "Volkswagen" },
+        { "id": 3, "nome": "Ford" },
+        { "id": 4, "nome": "Honda" },
+        { "id": 5, "nome": "Chevrolet" }
+    ],
+    "modelos": [
+        { "id": 1, "nome": "Corolla", "categorias": [2], "marca": 1 },
+        { "id": 2, "nome": "Gol", "categorias": [3], "marca": 2 },
+        { "id": 3, "nome": "Ka", "categorias": [3], "marca": 3 },
+        { "id": 4, "nome": "Civic", "categorias": [2], "marca": 4 },
+        { "id": 5, "nome": "Onix", "categorias": [3], "marca": 5 },
+        { "id": 6, "nome": "Hilux", "categorias": [4], "marca": 1 },
+        { "id": 7, "nome": "T-Cross", "categorias": [1], "marca": 2 },
+        { "id": 8, "nome": "Ranger", "categorias": [4], "marca": 3 },
+        { "id": 9, "nome": "HR-V", "categorias": [1], "marca": 4 },
+        { "id": 10, "nome": "Tracker", "categorias": [1], "marca": 5 }
+    ],
+    "carros": [
+        { "id": 1, "modelo": 1, "cor": "Prata", "status": "disponível", "kmRodados": 15000, "placa": "ABC1D23", "ano": 2022, "caracteristicas": [1, 3, 4, 7, 8] },
+        { "id": 2, "modelo": 2, "cor": "Branco", "status": "não disponível", "kmRodados": 42000, "placa": "BRA2E45", "ano": 2019, "caracteristicas": [1, 4] },
+        { "id": 3, "modelo": 3, "cor": "Vermelho", "status": "disponível", "kmRodados": 30000, "placa": "CDE3F67", "ano": 2020, "caracteristicas": [1, 3, 4] },
+        { "id": 4, "modelo": 4, "cor": "Preto", "status": "disponível", "kmRodados": 8000, "placa": "DEF4G89", "ano": 2023, "caracteristicas": [1, 2, 3, 5, 6, 7, 8, 9, 10] },
+        { "id": 5, "modelo": 5, "cor": "Cinza", "status": "não disponível", "kmRodados": 55000, "placa": "EFG5H01", "ano": 2018, "caracteristicas": [1, 3, 4] },
+        { "id": 6, "modelo": 6, "cor": "Branco", "status": "disponível", "kmRodados": 21000, "placa": "FGH6I23", "ano": 2021, "caracteristicas": [1, 2, 3, 4, 5, 6, 9, 10] },
+        { "id": 7, "modelo": 7, "cor": "Azul", "status": "disponível", "kmRodados": 12000, "placa": "GHI7J45", "ano": 2022, "caracteristicas": [1, 3, 4, 5, 7, 8] },
+        { "id": 8, "modelo": 8, "cor": "Preto", "status": "não disponível", "kmRodados": 60000, "placa": "HIJ8K67", "ano": 2017, "caracteristicas": [1, 2, 3, 4, 6] },
+        { "id": 9, "modelo": 9, "cor": "Vermelho", "status": "disponível", "kmRodados": 5000, "placa": "IJK9L89", "ano": 2024, "caracteristicas": [1, 2, 3, 4, 5, 7, 8, 9, 10] },
+        { "id": 10, "modelo": 10, "cor": "Prata", "status": "disponível", "kmRodados": 18000, "placa": "JKL0M12", "ano": 2023, "caracteristicas": [1, 3, 4, 7, 9] }
+    ],
+    "usuarios": [
+        { "id": 1, "email": "joao.silva@email.com", "senha": "senha123", "nome": "João Silva", "cpf": "123.456.789-01", "telefone": "(11) 91234-5678", "cnh": 1 },
+        { "id": 2, "email": "maria.souza@email.com", "senha": "senha123", "nome": "Maria Souza", "cpf": "234.567.890-12", "telefone": "(21) 92345-6789", "cnh": 2 },
+        { "id": 3, "email": "pedro.santos@email.com", "senha": "senha123", "nome": "Pedro Santos", "cpf": "345.678.901-23", "telefone": "(31) 93456-7890", "cnh": 3 },
+        { "id": 4, "email": "ana.oliveira@email.com", "senha": "senha123", "nome": "Ana Oliveira", "cpf": "456.789.012-34", "telefone": "(41) 94567-8901", "cnh": 4 }
+    ],
+    "cnhs": [
+        { "id": 1, "numero": "12345678900", "categoria": "B", "validade": "2028-05-14" },
+        { "id": 2, "numero": "23456789011", "categoria": "B", "validade": "2027-11-30" },
+        { "id": 3, "numero": "34567890122", "categoria": "B", "validade": "2026-08-22" },
+        { "id": 4, "numero": "45678901233", "categoria": "B", "validade": "2029-02-09" }
+    ],
+    "locacoes": [
+        { "id": 1, "carro": 2, "usuario": 1, "dataRetirada": "2026-09-10", "dataDevolucao": "2026-09-20", "localRetirada": "Filial Centro", "localDevolucao": "Filial Centro", "valorDiaria": 120.00, "status": "em andamento", "pagamento": 1, "seguro": 1, "multa": [1], "avaliacao": 1 },
+        { "id": 2, "carro": 5, "usuario": 2, "dataRetirada": "2026-09-15", "dataDevolucao": "2026-09-25", "localRetirada": "Filial Aeroporto", "localDevolucao": "Filial Aeroporto", "valorDiaria": 130.00, "status": "em andamento", "pagamento": 2, "seguro": null, "multa": [], "avaliacao": 2 },
+        { "id": 3, "carro": 8, "usuario": 3, "dataRetirada": "2026-09-05", "dataDevolucao": "2026-09-19", "localRetirada": "Filial Sul", "localDevolucao": "Filial Norte", "valorDiaria": 220.00, "status": "em andamento", "pagamento": 3, "seguro": 2, "multa": [2], "avaliacao": 3 },
+        { "id": 4, "carro": 1, "usuario": 4, "dataRetirada": "2026-08-01", "dataDevolucao": "2026-08-10", "localRetirada": "Filial Centro", "localDevolucao": "Filial Centro", "valorDiaria": 150.00, "status": "concluída", "pagamento": 4, "seguro": null, "multa": [], "avaliacao": 4 },
+        { "id": 5, "carro": 3, "usuario": 1, "dataRetirada": "2026-07-05", "dataDevolucao": "2026-07-12", "localRetirada": "Filial Sul", "localDevolucao": "Filial Sul", "valorDiaria": 140.00, "status": "concluída", "pagamento": 5, "seguro": 1, "multa": [], "avaliacao": 5 },
+        { "id": 6, "carro": 6, "usuario": 2, "dataRetirada": "2026-08-15", "dataDevolucao": "2026-08-22", "localRetirada": "Filial Aeroporto", "localDevolucao": "Filial Centro", "valorDiaria": 200.00, "status": "concluída", "pagamento": 6, "seguro": null, "multa": [3], "avaliacao": 6 },
+        { "id": 7, "carro": 9, "usuario": 3, "dataRetirada": "2026-06-10", "dataDevolucao": "2026-06-18", "localRetirada": "Filial Norte", "localDevolucao": "Filial Norte", "valorDiaria": 180.00, "status": "concluída", "pagamento": 7, "seguro": 2, "multa": [], "avaliacao": 7 }
+    ],
+    "pagamentos": [
+        { "id": 1, "valor": 1200.00, "forma": "cartão de crédito", "status": "pendente", "data": "2026-09-10", "locacao": 1 },
+        { "id": 2, "valor": 1300.00, "forma": "pix", "status": "pendente", "data": "2026-09-15", "locacao": 2 },
+        { "id": 3, "valor": 3080.00, "forma": "boleto", "status": "pendente", "data": "2026-09-05", "locacao": 3 },
+        { "id": 4, "valor": 1350.00, "forma": "cartão de crédito", "status": "pago", "data": "2026-08-01", "locacao": 4 },
+        { "id": 5, "valor": 980.00, "forma": "pix", "status": "pago", "data": "2026-07-05", "locacao": 5 },
+        { "id": 6, "valor": 1400.00, "forma": "cartão de crédito", "status": "pago", "data": "2026-08-15", "locacao": 6 },
+        { "id": 7, "valor": 1440.00, "forma": "dinheiro", "status": "pago", "data": "2026-06-10", "locacao": 7 }
+    ],
+    "seguros": [
+        { "id": 1, "nome": "Seguro Básico", "descricao": "Cobertura contra colisão com franquia reduzida", "valorDiaria": 25.00 },
+        { "id": 2, "nome": "Seguro Completo", "descricao": "Cobertura total contra colisão, roubo e furto sem franquia", "valorDiaria": 45.00 }
+    ],
+    "multas": [
+        { "id": 1, "tipoMulta": "Atraso", "valor": 80.00, "descricao": "Atraso na devolução do veículo", "locacao": 1 },
+        { "id": 2, "tipoMulta": "Atraso", "valor": 80.00, "descricao": "Atraso na devolução do veículo", "locacao": 3 },
+        { "id": 3, "tipoMulta": "Infração de trânsito", "valor": 195.23, "descricao": "Excesso de velocidade registrado durante o período da locação", "locacao": 6 }
+    ],
+    "avaliacoes": [
+        { "id": 1, "nota": 4, "comentario": "Bom atendimento, mas o carro tinha um pequeno arranhão.", "locacao": 1 },
+        { "id": 2, "nota": 5, "comentario": "Carro impecável e retirada rápida no aeroporto.", "locacao": 2 },
+        { "id": 3, "nota": 3, "comentario": "Processo de devolução demorado por causa da divergência no local.", "locacao": 3 },
+        { "id": 4, "nota": 5, "comentario": "Excelente experiência, recomendo!", "locacao": 4 },
+        { "id": 5, "nota": 4, "comentario": "Carro confortável, atendimento cordial.", "locacao": 5 },
+        { "id": 6, "nota": 2, "comentario": "Tive uma multa inesperada durante o período da locação.", "locacao": 6 },
+        { "id": 7, "nota": 5, "comentario": "Tudo correu perfeitamente, sem nenhum problema.", "locacao": 7 }
+    ]
+}
