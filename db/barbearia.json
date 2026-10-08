@@ -14,21 +14,21 @@
     ],
 
     "Cliente":[
-        {"id":1, "idPessoa":1},
-        {"id":2, "idPessoa":2},
-        {"id":3, "idPessoa":3},
-        {"id":4, "idPessoa":4},
-        {"id":5, "idPessoa":5}
+        {"id":1, "idPessoa":1, "nome": "NomePessoa1", "telefone": "11111111111", "email": "pessoa1@email.com"},
+        {"id":2, "idPessoa":2, "nome": "NomePessoa2", "telefone": "22222222222", "email": "pessoa2@email.com"},
+        {"id":3, "idPessoa":3, "nome": "NomePessoa3", "telefone": "33333333333", "email": "pessoa3@email.com"},
+        {"id":4, "idPessoa":4, "nome": "NomePessoa4", "telefone": "44444444444", "email": "pessoa4@email.com"},
+        {"id":5, "idPessoa":5, "nome": "NomePessoa5", "telefone": "55555555555", "email": "pessoa5@email.com"}
     ],
 
     "Administrador":[
-        {"id":1, "idPessoa":6}
+        {"id":1, "idPessoa":6, "idPessoa":6, "nome": "NomePessoa6", "telefone": "66666666666", "email": "pessoa6@email.com"}
     ],
 
     "Barbeiro":[
-        { "id": 1, "idPessoa": 7, "foto": "barbeiro1.jpg", "descricaoProfissional": "Descrição 1", "situacao": "Ativo", "idServicos": [1, 2, 3]},
-        { "id": 2, "idPessoa": 8, "foto": "barbeiro2.jpg", "descricaoProfissional": "Descrição 2", "situacao": "Ativo", "idServicos": [1, 3]},
-        { "id": 3, "idPessoa": 9, "foto": "barbeiro3.jpg", "descricaoProfissional": "Descrição 3", "situacao": "Ativo", "idServicos": [1, 2]}
+        { "id": 1, "idPessoa": 7, "foto": "barbeiro1.jpg", "descricaoProfissional": "Descrição 1", "situacao": "Ativo", "idServicos": [1, 2, 3], "nome": "NomePessoa1", "telefone": "11111111111", "email": "pessoa1@email.com"},
+        { "id": 2, "idPessoa": 8, "foto": "barbeiro2.jpg", "descricaoProfissional": "Descrição 2", "situacao": "Ativo", "idServicos": [1, 3], "nome": "NomePessoa2", "telefone": "22222222222", "email": "pessoa2@email.com"},
+        { "id": 3, "idPessoa": 9, "foto": "barbeiro3.jpg", "descricaoProfissional": "Descrição 3", "situacao": "Ativo", "idServicos": [1, 2], "nome": "NomePessoa3", "telefone": "33333333333", "email": "pessoa3@email.com"}
     ],
 
     "Servico":[
