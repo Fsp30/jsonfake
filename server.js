@@ -12,8 +12,8 @@ app.set('trust proxy', true);
 app.use(cors());
 
 app.use((req, res, next) => {
-  if (!['GET', 'HEAD', 'OPTIONS'].includes(req.method)) {
-    return res.status(405).json({ error: 'Somente GET é permitido' });
+  if (!['GET', 'DELETE', 'POST', 'HEAD', 'OPTIONS'].includes(req.method)) {
+    return res.status(405).json({ error: 'Falha no processamento' });
   }
   next();
 });
@@ -83,6 +83,18 @@ app.get('/:db/:resource/:id/:child', (req, res) => {
   const items = req.db[child].filter((i) => String(i[fk]) === id);
   res.json(applySortAndPage(applyFilters(items, req.query), req.query, res));
 });
+
+app.put('/:db/:resource/:id', (req, res) => {
+  res.status(202).send();
+})
+
+app.post('/:db/:resource/', (req, res) => {
+  res.status(201).send();
+})
+
+app.delete('/:db/:resource/:id', (req, res) => {
+  res.status(204).send();
+})
 
 app.listen(PORT, () => {
   console.log(`jsonfake rodando em http://localhost:${PORT}`);
