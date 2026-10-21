@@ -85,11 +85,15 @@ app.get('/:db/:resource/:id/:child', (req, res) => {
 });
 
 app.put('/:db/:resource/:id', (req, res) => {
-  res.status(202).send();
+  const result = {
+    req.params.id,
+    req.body
+  }
+  res.status(202).send(result);
 })
 
 app.post('/:db/:resource/', (req, res) => {
-  res.status(201).send();
+  res.status(201).send(req.body);
 })
 
 app.delete('/:db/:resource/:id', (req, res) => {
