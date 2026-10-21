@@ -85,10 +85,6 @@ app.get('/:db/:resource/:id/:child', (req, res) => {
 });
 
 app.put('/:db/:resource/:id', (req, res) => {
-  const result = {
-    req.params.id,
-    req.body
-  }
   res.status(202).send(result);
 })
 
