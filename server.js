@@ -10,9 +10,10 @@ const app = express();
 app.set('trust proxy', true);
 
 app.use(cors());
+app.use(express.json());
 
 app.use((req, res, next) => {
-  if (!['GET', 'DELETE', 'POST', 'HEAD', 'OPTIONS'].includes(req.method)) {
+  if (!['GET', 'PUT', 'DELETE', 'POST', 'HEAD', 'OPTIONS'].includes(req.method)) {
     return res.status(405).json({ error: 'Falha no processamento' });
   }
   next();
@@ -84,17 +85,22 @@ app.get('/:db/:resource/:id/:child', (req, res) => {
   res.json(applySortAndPage(applyFilters(items, req.query), req.query, res));
 });
 
-app.put('/:db/:resource/:id', (req, res) => {
-  res.status(202).send(result);
-})
 
-app.post('/:db/:resource/', (req, res) => {
-  res.status(201).send(req.body);
-})
+app.put('/:db/:resource/:id', (req, res) => {
+  res.status(202).json(req.body);
+});
+
+app.post('/:db/:resource', (req, res) => {
+  res.status(201).json(req.body);
+});
 
 app.delete('/:db/:resource/:id', (req, res) => {
   res.status(204).send();
-})
+});
+
+app.use((err, req, res, next) => {
+  res.status(err.status || 500).json({ error: err.message });
+});
 
 app.listen(PORT, () => {
   console.log(`jsonfake rodando em http://localhost:${PORT}`);
