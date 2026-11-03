@@ -85,13 +85,52 @@ app.get('/:db/:resource/:id/:child', (req, res) => {
   res.json(applySortAndPage(applyFilters(items, req.query), req.query, res));
 });
 
-
 app.put('/:db/:resource/:id', (req, res) => {
-  res.status(202).json(req.body);
+  const { resource, id } = req.params;
+  let data = req.db[resource];
+
+  // Se o recurso não existir ou não for uma lista, não há como aglomerar
+  if (!Array.isArray(data)) {
+    return res.status(404).json({ error: 'Recurso não encontrado ou inválido para edição' });
+  }
+
+  // Mapeia os dados substituindo o item editado pelo conteúdo do req.body
+  const updatedData = data.map((item) => {
+    if (String(item.id) === id) {
+      return { ...item, ...req.body, id: item.id }; // Garante que o ID original seja mantido/mesclado
+    }
+    return item;
+  });
+
+  // Retorna o aglomerado completo dos dados com status 200 OK ou 202 Accepted
+  res.status(200).json(updatedData);
 });
 
 app.post('/:db/:resource', (req, res) => {
-  res.status(201).json(req.body);
+  const { resource } = req.params;
+  let data = req.db[resource];
+
+  // Se o recurso não existir no banco, inicializa como uma lista vazia
+  if (!data) {
+    data = [];
+  } else if (!Array.isArray(data)) {
+    return res.status(400).json({ error: 'O recurso destino não é uma lista' });
+  }
+
+  // Cria o novo item combinando o body recebido
+  const newItem = { ...req.body };
+
+  // Opcional: Gera um ID incremental simples caso o body não envie um
+  if (!newItem.id) {
+    const maxId = data.reduce((max, item) => (Number(item.id) > max ? Number(item.id) : max), 0);
+    newItem.id = maxId + 1;
+  }
+
+  // Aglomera os dados antigos com o novo item incluído
+  const updatedData = [...data, newItem];
+
+  // Retorna o aglomerado completo dos dados com status 201 Created
+  res.status(201).json(updatedData);
 });
 
 app.delete('/:db/:resource/:id', (req, res) => {
