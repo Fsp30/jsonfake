@@ -1,69 +1,3192 @@
 {
-    "Pessoa":[
-        { "id": 1, "nome": "NomePessoa1", "telefone": "11111111111", "email": "pessoa1@email.com", "senha": "senha123"},
-        { "id": 2, "nome": "NomePessoa2", "telefone": "22222222222", "email": "pessoa2@email.com", "senha": "senha123"},
-        { "id": 3, "nome": "NomePessoa3", "telefone": "33333333333", "email": "pessoa3@email.com", "senha": "senha123"},
-        { "id": 4, "nome": "NomePessoa4", "telefone": "44444444444", "email": "pessoa4@email.com", "senha": "senha123"},
-        { "id": 5, "nome": "NomePessoa5", "telefone": "55555555555", "email": "pessoa5@email.com", "senha": "senha123"},
-        { "id": 6, "nome": "NomePessoa6", "telefone": "66666666666", "email": "pessoa6@email.com", "senha": "senha123"},
-        { "id": 7, "nome": "NomePessoa7", "telefone": "77777777777", "email": "pessoa7@email.com", "senha": "senha123"},
-        { "id": 8, "nome": "NomePessoa8", "telefone": "88888888888", "email": "pessoa8@email.com", "senha": "senha123"},
-        { "id": 9, "nome": "NomePessoa9", "telefone": "99999999999", "email": "pessoa9@email.com", "senha": "senha123"}
-    ],
-
-    "Cliente":[
-        { "id": 1, "idPessoa": 1, "nome": "NomePessoa1", "telefone": "11111111111", "email": "pessoa1@email.com"},
-        { "id": 2, "idPessoa": 2, "nome": "NomePessoa2", "telefone": "22222222222", "email": "pessoa2@email.com"},
-        { "id": 3, "idPessoa": 3, "nome": "NomePessoa3", "telefone": "33333333333", "email": "pessoa3@email.com"},
-        { "id": 4, "idPessoa": 4, "nome": "NomePessoa4", "telefone": "44444444444", "email": "pessoa4@email.com"},
-        { "id": 5, "idPessoa": 5, "nome": "NomePessoa5", "telefone": "55555555555", "email": "pessoa5@email.com"}
-    ],
-
-    "Administrador":[
-        { "id": 1, "idPessoa": 6, "nome": "NomePessoa6", "telefone": "66666666666", "email": "pessoa6@email.com"}
-    ],
-
-    "Barbeiro":[
-        { "id": 1, "idPessoa": 7, "foto": "barbeiro1.jpg", "descricaoProfissional": "Descrição 1", "situacao": "Ativo", "idServicos": [1, 2, 3], "nome": "NomePessoa7", "telefone": "77777777777", "email": "pessoa7@email.com"},
-        { "id": 2, "idPessoa": 8, "foto": "barbeiro2.jpg", "descricaoProfissional": "Descrição 2", "situacao": "Ativo", "idServicos": [1, 3], "nome": "NomePessoa8", "telefone": "88888888888", "email": "pessoa8@email.com"},
-        { "id": 3, "idPessoa": 9, "foto": "barbeiro3.jpg", "descricaoProfissional": "Descrição 3", "situacao": "Ativo", "idServicos": [1, 2], "nome": "NomePessoa9", "telefone": "99999999999", "email": "pessoa9@email.com"}
-    ],
-
-    "Servico":[
-        { "id": 1, "nome": "Servico 1", "imagem": "servico1.jpg", "valor": 40.00, "duracao": 30, "descricao": "Descricao Servico 1", "situacao": "Ativo"},
-        { "id": 2, "nome": "Servico 2", "imagem": "servico2.jpg", "valor": 30.00, "duracao": 30, "descricao": "Descricao Servico 2", "situacao": "Ativo"},
-        { "id": 3, "nome": "Servico 3", "imagem": "servico3.jpg", "valor": 60.00, "duracao": 60, "descricao": "Descricao Servico 3", "situacao": "Ativo"}
-    ],
-
-    "Agendamento":[
-        { "id": 1, "idCliente": 1, "idBarbeiro": 1, "idServico": 1, "data": "21/09/2026", "horario": "09:00", "valor": 40.00, "duracao": 30, "status": "Concluído", "pagamento": "Pago"},
-        { "id": 2, "idCliente": 2, "idBarbeiro": 2, "idServico": 1, "data": "21/09/2026", "horario": "10:00", "valor": 40.00, "duracao": 30, "status": "Concluído", "pagamento": "Pago"},
-        { "id": 3, "idCliente": 3, "idBarbeiro": 3, "idServico": 2, "data": "25/09/2026", "horario": "14:00", "valor": 30.00, "duracao": 30, "status": "Cancelado", "pagamento": "Não Aplicável"},
-        { "id": 4, "idCliente": 4, "idBarbeiro": 2, "idServico": 3, "data": "21/09/2026", "horario": "16:00", "valor": 60.00, "duracao": 60, "status": "Não Compareceu", "pagamento": "Não Aplicável"},
-        { "id": 5, "idCliente": 5, "idBarbeiro": 3, "idServico": 2, "data": "09/10/2026", "horario": "15:30", "valor": 30.00, "duracao": 30, "status": "Agendado", "pagamento": "Pendente"}
-    ],
-
-    "HorarioTrabalho":[
-        { "id": 1, "idBarbeiro": 1, "diaSemana": "Segunda-feira", "horarioInicial": "08:00", "horarioFinal": "18:00", "inicioIntervalo": "12:00", "fimIntervalo": "13:00"},
-        { "id": 2, "idBarbeiro": 1, "diaSemana": "Terça-feira", "horarioInicial": "08:00", "horarioFinal": "18:00", "inicioIntervalo": "12:00", "fimIntervalo": "13:00"},
-        { "id": 3, "idBarbeiro": 2, "diaSemana": "Segunda-feira", "horarioInicial": "09:00", "horarioFinal": "19:00", "inicioIntervalo": "13:00", "fimIntervalo": "14:00"},
-        { "id": 4, "idBarbeiro": 2, "diaSemana": "Quarta-feira", "horarioInicial": "09:00", "horarioFinal": "19:00", "inicioIntervalo": "13:00", "fimIntervalo": "14:00"},
-        { "id": 5, "idBarbeiro": 3, "diaSemana": "Sexta-feira", "horarioInicial": "08:00", "horarioFinal": "17:00", "inicioIntervalo": "12:00", "fimIntervalo": "13:00"}
-    ],
-
-    "Indisponibilidade":[
-        { "id": 1, "idBarbeiro": 1, "data": "29/09/2026", "horarioInicial": "14:00", "horarioFinal": "16:00", "motivo": "Compromisso Pessoal", "descricaoMotivo": ""},
-        { "id": 2, "idBarbeiro": 1, "data": "06/10/2026", "horarioInicial": "08:00", "horarioFinal": "12:00", "motivo": "Folga", "descricaoMotivo": ""},
-        { "id": 3, "idBarbeiro": 2, "data": "05/10/2026", "horarioInicial": "09:00", "horarioFinal": "13:00", "motivo": "Férias", "descricaoMotivo": ""},
-        { "id": 4, "idBarbeiro": 3, "data": "02/10/2026", "horarioInicial": "13:00", "horarioFinal": "17:00", "motivo": "Atestado", "descricaoMotivo": ""},
-        { "id": 5, "idBarbeiro": 2, "data": "14/10/2026", "horarioInicial": "15:00", "horarioFinal": "17:00", "motivo": "Outro", "descricaoMotivo": "Compromisso familiar"}
-    ],
-
-    "Despesa":[
-        { "id": 1, "idAdministrador": 1, "descricao": "Compra de produtos para cabelo", "categoria": "Produtos", "data": "05/09/2026", "valor": 180.00},
-        { "id": 2, "idAdministrador": 1, "descricao": "Conta de energia", "categoria": "Contas", "data": "08/09/2026", "valor": 350.50},
-        { "id": 3, "idAdministrador": 1, "descricao": "Aluguel da barbearia", "categoria": "Aluguel", "data": "10/09/2026", "valor": 2500.00},
-        { "id": 4, "idAdministrador": 1, "descricao": "Manutencao das maquinas de corte", "categoria": "Manutenção", "data": "15/09/2026", "valor": 220.00},
-        { "id": 5, "idAdministrador": 1, "descricao": "Material de escritorio", "categoria": "Outros", "data": "20/09/2026", "valor": 95.90}
-    ]
+  "Pessoa": [
+    {
+      "id": 1,
+      "nome": "cliente1",
+      "telefone": "(11) 11111-1111",
+      "email": "cliente1@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 2,
+      "nome": "cliente2",
+      "telefone": "(22) 22222-2222",
+      "email": "cliente2@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 3,
+      "nome": "cliente3",
+      "telefone": "(33) 33333-3333",
+      "email": "cliente3@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 4,
+      "nome": "cliente4",
+      "telefone": "(44) 44444-4444",
+      "email": "cliente4@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 5,
+      "nome": "cliente5",
+      "telefone": "(55) 55555-5555",
+      "email": "cliente5@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 6,
+      "nome": "administrador1",
+      "telefone": "(66) 66666-6666",
+      "email": "administrador1@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 7,
+      "nome": "barbeiro1",
+      "telefone": "(77) 77777-7777",
+      "email": "barbeiro1@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 8,
+      "nome": "barbeiro2",
+      "telefone": "(88) 88888-8888",
+      "email": "barbeiro2@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 9,
+      "nome": "barbeiro3",
+      "telefone": "(99) 99999-9999",
+      "email": "barbeiro3@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 10,
+      "nome": "cliente6",
+      "telefone": "(11) 90000-0010",
+      "email": "cliente6@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 11,
+      "nome": "cliente7",
+      "telefone": "(11) 90000-0011",
+      "email": "cliente7@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 12,
+      "nome": "cliente8",
+      "telefone": "(11) 90000-0012",
+      "email": "cliente8@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 13,
+      "nome": "cliente9",
+      "telefone": "(11) 90000-0013",
+      "email": "cliente9@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 14,
+      "nome": "cliente10",
+      "telefone": "(11) 90000-0014",
+      "email": "cliente10@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 15,
+      "nome": "cliente11",
+      "telefone": "(11) 90000-0015",
+      "email": "cliente11@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 16,
+      "nome": "cliente12",
+      "telefone": "(11) 90000-0016",
+      "email": "cliente12@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 17,
+      "nome": "cliente13",
+      "telefone": "(11) 90000-0017",
+      "email": "cliente13@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 18,
+      "nome": "cliente14",
+      "telefone": "(11) 90000-0018",
+      "email": "cliente14@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 19,
+      "nome": "cliente15",
+      "telefone": "(11) 90000-0019",
+      "email": "cliente15@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 20,
+      "nome": "cliente16",
+      "telefone": "(11) 90000-0020",
+      "email": "cliente16@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 21,
+      "nome": "cliente17",
+      "telefone": "(11) 90000-0021",
+      "email": "cliente17@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 22,
+      "nome": "cliente18",
+      "telefone": "(11) 90000-0022",
+      "email": "cliente18@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 23,
+      "nome": "cliente19",
+      "telefone": "(11) 90000-0023",
+      "email": "cliente19@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 24,
+      "nome": "cliente20",
+      "telefone": "(11) 90000-0024",
+      "email": "cliente20@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 25,
+      "nome": "cliente21",
+      "telefone": "(11) 90000-0025",
+      "email": "cliente21@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 26,
+      "nome": "cliente22",
+      "telefone": "(11) 90000-0026",
+      "email": "cliente22@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 27,
+      "nome": "cliente23",
+      "telefone": "(11) 90000-0027",
+      "email": "cliente23@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 28,
+      "nome": "cliente24",
+      "telefone": "(11) 90000-0028",
+      "email": "cliente24@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 29,
+      "nome": "cliente25",
+      "telefone": "(11) 90000-0029",
+      "email": "cliente25@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 30,
+      "nome": "barbeiro4",
+      "telefone": "(11) 90000-0030",
+      "email": "barbeiro4@email.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 31,
+      "nome": "barbeiro5",
+      "telefone": "(11) 90000-0031",
+      "email": "barbeiro5@email.com",
+      "senha": "senha123"
+    }
+  ],
+  "Cliente": [
+    {
+      "id": 1,
+      "idPessoa": 1,
+      "nome": "cliente1",
+      "telefone": "(11) 11111-1111",
+      "email": "cliente1@email.com"
+    },
+    {
+      "id": 2,
+      "idPessoa": 2,
+      "nome": "cliente2",
+      "telefone": "(22) 22222-2222",
+      "email": "cliente2@email.com"
+    },
+    {
+      "id": 3,
+      "idPessoa": 3,
+      "nome": "cliente3",
+      "telefone": "(33) 33333-3333",
+      "email": "cliente3@email.com"
+    },
+    {
+      "id": 4,
+      "idPessoa": 4,
+      "nome": "cliente4",
+      "telefone": "(44) 44444-4444",
+      "email": "cliente4@email.com"
+    },
+    {
+      "id": 5,
+      "idPessoa": 5,
+      "nome": "cliente5",
+      "telefone": "(55) 55555-5555",
+      "email": "cliente5@email.com"
+    },
+    {
+      "id": 6,
+      "idPessoa": 10,
+      "nome": "cliente6",
+      "telefone": "(11) 90000-0010",
+      "email": "cliente6@email.com"
+    },
+    {
+      "id": 7,
+      "idPessoa": 11,
+      "nome": "cliente7",
+      "telefone": "(11) 90000-0011",
+      "email": "cliente7@email.com"
+    },
+    {
+      "id": 8,
+      "idPessoa": 12,
+      "nome": "cliente8",
+      "telefone": "(11) 90000-0012",
+      "email": "cliente8@email.com"
+    },
+    {
+      "id": 9,
+      "idPessoa": 13,
+      "nome": "cliente9",
+      "telefone": "(11) 90000-0013",
+      "email": "cliente9@email.com"
+    },
+    {
+      "id": 10,
+      "idPessoa": 14,
+      "nome": "cliente10",
+      "telefone": "(11) 90000-0014",
+      "email": "cliente10@email.com"
+    },
+    {
+      "id": 11,
+      "idPessoa": 15,
+      "nome": "cliente11",
+      "telefone": "(11) 90000-0015",
+      "email": "cliente11@email.com"
+    },
+    {
+      "id": 12,
+      "idPessoa": 16,
+      "nome": "cliente12",
+      "telefone": "(11) 90000-0016",
+      "email": "cliente12@email.com"
+    },
+    {
+      "id": 13,
+      "idPessoa": 17,
+      "nome": "cliente13",
+      "telefone": "(11) 90000-0017",
+      "email": "cliente13@email.com"
+    },
+    {
+      "id": 14,
+      "idPessoa": 18,
+      "nome": "cliente14",
+      "telefone": "(11) 90000-0018",
+      "email": "cliente14@email.com"
+    },
+    {
+      "id": 15,
+      "idPessoa": 19,
+      "nome": "cliente15",
+      "telefone": "(11) 90000-0019",
+      "email": "cliente15@email.com"
+    },
+    {
+      "id": 16,
+      "idPessoa": 20,
+      "nome": "cliente16",
+      "telefone": "(11) 90000-0020",
+      "email": "cliente16@email.com"
+    },
+    {
+      "id": 17,
+      "idPessoa": 21,
+      "nome": "cliente17",
+      "telefone": "(11) 90000-0021",
+      "email": "cliente17@email.com"
+    },
+    {
+      "id": 18,
+      "idPessoa": 22,
+      "nome": "cliente18",
+      "telefone": "(11) 90000-0022",
+      "email": "cliente18@email.com"
+    },
+    {
+      "id": 19,
+      "idPessoa": 23,
+      "nome": "cliente19",
+      "telefone": "(11) 90000-0023",
+      "email": "cliente19@email.com"
+    },
+    {
+      "id": 20,
+      "idPessoa": 24,
+      "nome": "cliente20",
+      "telefone": "(11) 90000-0024",
+      "email": "cliente20@email.com"
+    },
+    {
+      "id": 21,
+      "idPessoa": 25,
+      "nome": "cliente21",
+      "telefone": "(11) 90000-0025",
+      "email": "cliente21@email.com"
+    },
+    {
+      "id": 22,
+      "idPessoa": 26,
+      "nome": "cliente22",
+      "telefone": "(11) 90000-0026",
+      "email": "cliente22@email.com"
+    },
+    {
+      "id": 23,
+      "idPessoa": 27,
+      "nome": "cliente23",
+      "telefone": "(11) 90000-0027",
+      "email": "cliente23@email.com"
+    },
+    {
+      "id": 24,
+      "idPessoa": 28,
+      "nome": "cliente24",
+      "telefone": "(11) 90000-0028",
+      "email": "cliente24@email.com"
+    },
+    {
+      "id": 25,
+      "idPessoa": 29,
+      "nome": "cliente25",
+      "telefone": "(11) 90000-0029",
+      "email": "cliente25@email.com"
+    }
+  ],
+  "Administrador": [
+    {
+      "id": 1,
+      "idPessoa": 6,
+      "nome": "administrador1",
+      "telefone": "(66) 66666-6666",
+      "email": "administrador1@email.com"
+    }
+  ],
+  "Barbeiro": [
+    {
+      "id": 1,
+      "idPessoa": 7,
+      "foto": "barbeiro1.jpg",
+      "descricaoProfissional": "Especialista em cortes clássicos, degradês e acabamento de barba.",
+      "situacao": "Ativo",
+      "idServicos": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8
+      ],
+      "nome": "barbeiro1",
+      "telefone": "(77) 77777-7777",
+      "email": "barbeiro1@email.com"
+    },
+    {
+      "id": 2,
+      "idPessoa": 8,
+      "foto": "barbeiro2.jpg",
+      "descricaoProfissional": "Profissional com experiência em visagismo, cortes modernos e tratamentos.",
+      "situacao": "Ativo",
+      "idServicos": [
+        1,
+        3,
+        5,
+        7,
+        9
+      ],
+      "nome": "barbeiro2",
+      "telefone": "(88) 88888-8888",
+      "email": "barbeiro2@email.com"
+    },
+    {
+      "id": 3,
+      "idPessoa": 9,
+      "foto": "barbeiro3.jpg",
+      "descricaoProfissional": "Atendimento focado em precisão, cortes tradicionais e cuidados masculinos.",
+      "situacao": "Ativo",
+      "idServicos": [
+        1,
+        2,
+        4,
+        6,
+        11
+      ],
+      "nome": "barbeiro3",
+      "telefone": "(99) 99999-9999",
+      "email": "barbeiro3@email.com"
+    },
+    {
+      "id": 4,
+      "idPessoa": 30,
+      "foto": "barbeiro4.jpg",
+      "descricaoProfissional": "Especialista em cortes, barba e serviços premium com agendamento.",
+      "situacao": "Ativo",
+      "idServicos": [
+        1,
+        2,
+        3,
+        5,
+        6,
+        8,
+        9,
+        11
+      ],
+      "nome": "barbeiro4",
+      "telefone": "(11) 90000-0030",
+      "email": "barbeiro4@email.com"
+    },
+    {
+      "id": 5,
+      "idPessoa": 31,
+      "foto": "barbeiro5.jpg",
+      "descricaoProfissional": "Profissional temporariamente afastado, mantido para consulta do histórico.",
+      "situacao": "Inativo",
+      "idServicos": [
+        1,
+        2,
+        3
+      ],
+      "nome": "barbeiro5",
+      "telefone": "(11) 90000-0031",
+      "email": "barbeiro5@email.com"
+    }
+  ],
+  "Servico": [
+    {
+      "id": 1,
+      "nome": "serviço1",
+      "imagem": "servico1.jpg",
+      "valor": 40.0,
+      "duracao": 30,
+      "descricao": "Corte masculino tradicional, finalização e acabamento na nuca.",
+      "situacao": "Ativo"
+    },
+    {
+      "id": 2,
+      "nome": "serviço2",
+      "imagem": "servico2.jpg",
+      "valor": 30.0,
+      "duracao": 30,
+      "descricao": "Modelagem e alinhamento de barba com toalha quente.",
+      "situacao": "Ativo"
+    },
+    {
+      "id": 3,
+      "nome": "serviço3",
+      "imagem": "servico3.jpg",
+      "valor": 60.0,
+      "duracao": 60,
+      "descricao": "Combo de corte masculino e barba, com acabamento completo.",
+      "situacao": "Ativo"
+    },
+    {
+      "id": 4,
+      "nome": "serviço4",
+      "imagem": "servico4.jpg",
+      "valor": 60.0,
+      "duracao": 45,
+      "descricao": "Corte degradê com acabamento na máquina e navalha.",
+      "situacao": "Ativo"
+    },
+    {
+      "id": 5,
+      "nome": "serviço5",
+      "imagem": "servico5.jpg",
+      "valor": 50.0,
+      "duracao": 45,
+      "descricao": "Corte personalizado com orientação de estilo e finalização.",
+      "situacao": "Ativo"
+    },
+    {
+      "id": 6,
+      "nome": "serviço6",
+      "imagem": "servico6.jpg",
+      "valor": 40.0,
+      "duracao": 30,
+      "descricao": "Hidratação capilar com lavagem e finalização.",
+      "situacao": "Ativo"
+    },
+    {
+      "id": 7,
+      "nome": "serviço7",
+      "imagem": "servico7.jpg",
+      "valor": 85.0,
+      "duracao": 75,
+      "descricao": "Tratamento capilar com lavagem e aplicação de produtos.",
+      "situacao": "Ativo"
+    },
+    {
+      "id": 8,
+      "nome": "serviço8",
+      "imagem": "servico8.jpg",
+      "valor": 30.0,
+      "duracao": 20,
+      "descricao": "Acabamento e alinhamento de contornos de cabelo e barba.",
+      "situacao": "Ativo"
+    },
+    {
+      "id": 9,
+      "nome": "serviço9",
+      "imagem": "servico9.jpg",
+      "valor": 100.0,
+      "duracao": 90,
+      "descricao": "Pacote premium de corte, barba e tratamento capilar.",
+      "situacao": "Ativo"
+    },
+    {
+      "id": 10,
+      "nome": "serviço10",
+      "imagem": "servico10.jpg",
+      "valor": 120.0,
+      "duracao": 120,
+      "descricao": "Procedimento antigo, indisponível para novos agendamentos.",
+      "situacao": "Inativo"
+    },
+    {
+      "id": 11,
+      "nome": "serviço11",
+      "imagem": "servico11.jpg",
+      "valor": 55.0,
+      "duracao": 40,
+      "descricao": "Corte infantil com atenção ao conforto e à finalização.",
+      "situacao": "Ativo"
+    },
+    {
+      "id": 12,
+      "nome": "serviço12",
+      "imagem": "servico12.jpg",
+      "valor": 95.0,
+      "duracao": 60,
+      "descricao": "Pigmentação de barba, aguardando profissional habilitado.",
+      "situacao": "Ativo"
+    }
+  ],
+  "Agendamento": [
+    {
+      "id": 1,
+      "idCliente": 1,
+      "idBarbeiro": 1,
+      "idServico": 1,
+      "data": "21/09/2026",
+      "horario": "09:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 2,
+      "idCliente": 2,
+      "idBarbeiro": 2,
+      "idServico": 1,
+      "data": "21/09/2026",
+      "horario": "10:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 3,
+      "idCliente": 3,
+      "idBarbeiro": 3,
+      "idServico": 2,
+      "data": "25/09/2026",
+      "horario": "14:00",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Cancelado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 4,
+      "idCliente": 4,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "21/09/2026",
+      "horario": "16:00",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Não Compareceu",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 5,
+      "idCliente": 5,
+      "idBarbeiro": 3,
+      "idServico": 2,
+      "data": "09/10/2026",
+      "horario": "15:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 6,
+      "idCliente": 1,
+      "idBarbeiro": 1,
+      "idServico": 1,
+      "data": "09/11/2026",
+      "horario": "09:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 7,
+      "idCliente": 2,
+      "idBarbeiro": 1,
+      "idServico": 3,
+      "data": "09/11/2026",
+      "horario": "11:00",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 8,
+      "idCliente": 3,
+      "idBarbeiro": 2,
+      "idServico": 1,
+      "data": "09/11/2026",
+      "horario": "09:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 9,
+      "idCliente": 4,
+      "idBarbeiro": 1,
+      "idServico": 4,
+      "data": "10/11/2026",
+      "horario": "13:00",
+      "valor": 60.0,
+      "duracao": 45,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 10,
+      "idCliente": 5,
+      "idBarbeiro": 2,
+      "idServico": 7,
+      "data": "11/11/2026",
+      "horario": "16:00",
+      "valor": 85.0,
+      "duracao": 75,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 11,
+      "idCliente": 6,
+      "idBarbeiro": 4,
+      "idServico": 8,
+      "data": "12/11/2026",
+      "horario": "10:15",
+      "valor": 30.0,
+      "duracao": 20,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 12,
+      "idCliente": 7,
+      "idBarbeiro": 3,
+      "idServico": 2,
+      "data": "13/11/2026",
+      "horario": "14:00",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 13,
+      "idCliente": 8,
+      "idBarbeiro": 1,
+      "idServico": 1,
+      "data": "16/11/2026",
+      "horario": "09:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 14,
+      "idCliente": 9,
+      "idBarbeiro": 4,
+      "idServico": 9,
+      "data": "17/11/2026",
+      "horario": "09:00",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 15,
+      "idCliente": 10,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "18/11/2026",
+      "horario": "11:00",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 16,
+      "idCliente": 11,
+      "idBarbeiro": 3,
+      "idServico": 11,
+      "data": "20/11/2026",
+      "horario": "10:00",
+      "valor": 55.0,
+      "duracao": 40,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 17,
+      "idCliente": 12,
+      "idBarbeiro": 4,
+      "idServico": 5,
+      "data": "21/11/2026",
+      "horario": "11:00",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 18,
+      "idCliente": 14,
+      "idBarbeiro": 5,
+      "idServico": 2,
+      "data": "12/10/2026",
+      "horario": "10:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 19,
+      "idCliente": 4,
+      "idBarbeiro": 1,
+      "idServico": 8,
+      "data": "03/10/2026",
+      "horario": "12:30",
+      "valor": 30.0,
+      "duracao": 20,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 20,
+      "idCliente": 14,
+      "idBarbeiro": 1,
+      "idServico": 8,
+      "data": "28/09/2026",
+      "horario": "10:45",
+      "valor": 30.0,
+      "duracao": 20,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 21,
+      "idCliente": 16,
+      "idBarbeiro": 1,
+      "idServico": 2,
+      "data": "10/10/2026",
+      "horario": "11:15",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 22,
+      "idCliente": 1,
+      "idBarbeiro": 1,
+      "idServico": 4,
+      "data": "23/10/2026",
+      "horario": "09:00",
+      "valor": 60.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 23,
+      "idCliente": 13,
+      "idBarbeiro": 2,
+      "idServico": 5,
+      "data": "26/09/2026",
+      "horario": "10:15",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 24,
+      "idCliente": 11,
+      "idBarbeiro": 4,
+      "idServico": 5,
+      "data": "10/10/2026",
+      "horario": "12:30",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 25,
+      "idCliente": 17,
+      "idBarbeiro": 1,
+      "idServico": 1,
+      "data": "11/09/2026",
+      "horario": "10:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 26,
+      "idCliente": 23,
+      "idBarbeiro": 1,
+      "idServico": 2,
+      "data": "19/10/2026",
+      "horario": "16:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 27,
+      "idCliente": 7,
+      "idBarbeiro": 5,
+      "idServico": 1,
+      "data": "11/09/2026",
+      "horario": "15:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 28,
+      "idCliente": 5,
+      "idBarbeiro": 2,
+      "idServico": 5,
+      "data": "10/09/2026",
+      "horario": "10:30",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 29,
+      "idCliente": 11,
+      "idBarbeiro": 2,
+      "idServico": 9,
+      "data": "30/10/2026",
+      "horario": "11:15",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 30,
+      "idCliente": 20,
+      "idBarbeiro": 5,
+      "idServico": 1,
+      "data": "18/09/2026",
+      "horario": "14:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 31,
+      "idCliente": 3,
+      "idBarbeiro": 4,
+      "idServico": 8,
+      "data": "22/10/2026",
+      "horario": "17:00",
+      "valor": 30.0,
+      "duracao": 20,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 32,
+      "idCliente": 25,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "07/10/2026",
+      "horario": "15:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 33,
+      "idCliente": 8,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "22/10/2026",
+      "horario": "14:15",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 34,
+      "idCliente": 6,
+      "idBarbeiro": 2,
+      "idServico": 7,
+      "data": "16/10/2026",
+      "horario": "10:15",
+      "valor": 85.0,
+      "duracao": 75,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 35,
+      "idCliente": 1,
+      "idBarbeiro": 4,
+      "idServico": 6,
+      "data": "03/11/2026",
+      "horario": "15:15",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 36,
+      "idCliente": 10,
+      "idBarbeiro": 2,
+      "idServico": 5,
+      "data": "09/09/2026",
+      "horario": "14:45",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 37,
+      "idCliente": 7,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "24/10/2026",
+      "horario": "10:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 38,
+      "idCliente": 5,
+      "idBarbeiro": 4,
+      "idServico": 6,
+      "data": "19/09/2026",
+      "horario": "08:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Não Compareceu",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 39,
+      "idCliente": 20,
+      "idBarbeiro": 3,
+      "idServico": 11,
+      "data": "18/09/2026",
+      "horario": "10:00",
+      "valor": 55.0,
+      "duracao": 40,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 40,
+      "idCliente": 7,
+      "idBarbeiro": 2,
+      "idServico": 1,
+      "data": "07/09/2026",
+      "horario": "10:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 41,
+      "idCliente": 15,
+      "idBarbeiro": 3,
+      "idServico": 1,
+      "data": "04/09/2026",
+      "horario": "15:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 42,
+      "idCliente": 11,
+      "idBarbeiro": 2,
+      "idServico": 1,
+      "data": "05/11/2026",
+      "horario": "10:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 43,
+      "idCliente": 15,
+      "idBarbeiro": 1,
+      "idServico": 2,
+      "data": "08/10/2026",
+      "horario": "15:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 44,
+      "idCliente": 9,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "08/10/2026",
+      "horario": "10:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 45,
+      "idCliente": 7,
+      "idBarbeiro": 4,
+      "idServico": 2,
+      "data": "20/10/2026",
+      "horario": "10:45",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 46,
+      "idCliente": 13,
+      "idBarbeiro": 1,
+      "idServico": 2,
+      "data": "28/10/2026",
+      "horario": "10:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Não Compareceu",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 47,
+      "idCliente": 5,
+      "idBarbeiro": 5,
+      "idServico": 3,
+      "data": "07/10/2026",
+      "horario": "09:00",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Cancelado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 48,
+      "idCliente": 3,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "04/11/2026",
+      "horario": "10:00",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 49,
+      "idCliente": 20,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "21/10/2026",
+      "horario": "14:15",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 50,
+      "idCliente": 9,
+      "idBarbeiro": 4,
+      "idServico": 8,
+      "data": "02/11/2026",
+      "horario": "10:30",
+      "valor": 30.0,
+      "duracao": 20,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 51,
+      "idCliente": 17,
+      "idBarbeiro": 4,
+      "idServico": 1,
+      "data": "10/09/2026",
+      "horario": "15:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 52,
+      "idCliente": 23,
+      "idBarbeiro": 3,
+      "idServico": 2,
+      "data": "19/09/2026",
+      "horario": "09:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 53,
+      "idCliente": 8,
+      "idBarbeiro": 1,
+      "idServico": 4,
+      "data": "29/10/2026",
+      "horario": "15:30",
+      "valor": 60.0,
+      "duracao": 45,
+      "status": "Cancelado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 54,
+      "idCliente": 2,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "07/10/2026",
+      "horario": "16:00",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 55,
+      "idCliente": 20,
+      "idBarbeiro": 5,
+      "idServico": 1,
+      "data": "02/10/2026",
+      "horario": "14:15",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 56,
+      "idCliente": 15,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "15/09/2026",
+      "horario": "14:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 57,
+      "idCliente": 25,
+      "idBarbeiro": 3,
+      "idServico": 1,
+      "data": "28/10/2026",
+      "horario": "11:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 58,
+      "idCliente": 8,
+      "idBarbeiro": 3,
+      "idServico": 1,
+      "data": "30/10/2026",
+      "horario": "10:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Cancelado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 59,
+      "idCliente": 19,
+      "idBarbeiro": 4,
+      "idServico": 1,
+      "data": "04/09/2026",
+      "horario": "18:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 60,
+      "idCliente": 23,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "02/09/2026",
+      "horario": "15:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 61,
+      "idCliente": 24,
+      "idBarbeiro": 1,
+      "idServico": 2,
+      "data": "12/09/2026",
+      "horario": "11:15",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 62,
+      "idCliente": 8,
+      "idBarbeiro": 3,
+      "idServico": 4,
+      "data": "09/09/2026",
+      "horario": "11:30",
+      "valor": 60.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 63,
+      "idCliente": 2,
+      "idBarbeiro": 1,
+      "idServico": 3,
+      "data": "03/11/2026",
+      "horario": "08:15",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Não Compareceu",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 64,
+      "idCliente": 19,
+      "idBarbeiro": 4,
+      "idServico": 8,
+      "data": "30/09/2026",
+      "horario": "14:30",
+      "valor": 30.0,
+      "duracao": 20,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 65,
+      "idCliente": 10,
+      "idBarbeiro": 2,
+      "idServico": 5,
+      "data": "05/10/2026",
+      "horario": "15:00",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Cancelado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 66,
+      "idCliente": 10,
+      "idBarbeiro": 2,
+      "idServico": 9,
+      "data": "15/09/2026",
+      "horario": "14:45",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 67,
+      "idCliente": 4,
+      "idBarbeiro": 3,
+      "idServico": 4,
+      "data": "22/09/2026",
+      "horario": "10:00",
+      "valor": 60.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 68,
+      "idCliente": 7,
+      "idBarbeiro": 4,
+      "idServico": 3,
+      "data": "25/09/2026",
+      "horario": "09:30",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 69,
+      "idCliente": 17,
+      "idBarbeiro": 4,
+      "idServico": 11,
+      "data": "03/10/2026",
+      "horario": "10:15",
+      "valor": 55.0,
+      "duracao": 40,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 70,
+      "idCliente": 5,
+      "idBarbeiro": 2,
+      "idServico": 9,
+      "data": "16/09/2026",
+      "horario": "14:00",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 71,
+      "idCliente": 21,
+      "idBarbeiro": 3,
+      "idServico": 2,
+      "data": "15/10/2026",
+      "horario": "16:00",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Cancelado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 72,
+      "idCliente": 24,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "02/11/2026",
+      "horario": "15:45",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 73,
+      "idCliente": 7,
+      "idBarbeiro": 3,
+      "idServico": 4,
+      "data": "06/10/2026",
+      "horario": "14:45",
+      "valor": 60.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 74,
+      "idCliente": 23,
+      "idBarbeiro": 4,
+      "idServico": 6,
+      "data": "01/09/2026",
+      "horario": "14:15",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 75,
+      "idCliente": 19,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "05/10/2026",
+      "horario": "17:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Cancelado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 76,
+      "idCliente": 23,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "13/10/2026",
+      "horario": "17:15",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 77,
+      "idCliente": 16,
+      "idBarbeiro": 5,
+      "idServico": 2,
+      "data": "30/09/2026",
+      "horario": "11:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Cancelado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 78,
+      "idCliente": 3,
+      "idBarbeiro": 3,
+      "idServico": 1,
+      "data": "27/10/2026",
+      "horario": "14:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 79,
+      "idCliente": 2,
+      "idBarbeiro": 3,
+      "idServico": 2,
+      "data": "08/09/2026",
+      "horario": "14:45",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 80,
+      "idCliente": 19,
+      "idBarbeiro": 1,
+      "idServico": 4,
+      "data": "13/10/2026",
+      "horario": "14:30",
+      "valor": 60.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 81,
+      "idCliente": 22,
+      "idBarbeiro": 5,
+      "idServico": 2,
+      "data": "04/09/2026",
+      "horario": "15:45",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 82,
+      "idCliente": 18,
+      "idBarbeiro": 2,
+      "idServico": 5,
+      "data": "24/10/2026",
+      "horario": "11:30",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 83,
+      "idCliente": 19,
+      "idBarbeiro": 1,
+      "idServico": 1,
+      "data": "26/09/2026",
+      "horario": "08:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 84,
+      "idCliente": 6,
+      "idBarbeiro": 5,
+      "idServico": 1,
+      "data": "02/09/2026",
+      "horario": "13:15",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Cancelado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 85,
+      "idCliente": 15,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "05/09/2026",
+      "horario": "12:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 86,
+      "idCliente": 11,
+      "idBarbeiro": 5,
+      "idServico": 3,
+      "data": "09/09/2026",
+      "horario": "13:00",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 87,
+      "idCliente": 12,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "22/10/2026",
+      "horario": "18:00",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Não Compareceu",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 88,
+      "idCliente": 23,
+      "idBarbeiro": 1,
+      "idServico": 2,
+      "data": "09/10/2026",
+      "horario": "09:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Não Compareceu",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 89,
+      "idCliente": 22,
+      "idBarbeiro": 2,
+      "idServico": 7,
+      "data": "28/10/2026",
+      "horario": "16:15",
+      "valor": 85.0,
+      "duracao": 75,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 90,
+      "idCliente": 5,
+      "idBarbeiro": 2,
+      "idServico": 1,
+      "data": "13/10/2026",
+      "horario": "18:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Cancelado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 91,
+      "idCliente": 25,
+      "idBarbeiro": 3,
+      "idServico": 1,
+      "data": "30/09/2026",
+      "horario": "15:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 92,
+      "idCliente": 23,
+      "idBarbeiro": 2,
+      "idServico": 1,
+      "data": "28/09/2026",
+      "horario": "11:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 93,
+      "idCliente": 3,
+      "idBarbeiro": 2,
+      "idServico": 9,
+      "data": "23/10/2026",
+      "horario": "17:30",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 94,
+      "idCliente": 5,
+      "idBarbeiro": 1,
+      "idServico": 1,
+      "data": "27/10/2026",
+      "horario": "13:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 95,
+      "idCliente": 12,
+      "idBarbeiro": 3,
+      "idServico": 2,
+      "data": "17/09/2026",
+      "horario": "14:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 96,
+      "idCliente": 10,
+      "idBarbeiro": 1,
+      "idServico": 6,
+      "data": "08/09/2026",
+      "horario": "09:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 97,
+      "idCliente": 6,
+      "idBarbeiro": 1,
+      "idServico": 2,
+      "data": "05/11/2026",
+      "horario": "14:45",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 98,
+      "idCliente": 7,
+      "idBarbeiro": 4,
+      "idServico": 5,
+      "data": "28/10/2026",
+      "horario": "14:15",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Não Compareceu",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 99,
+      "idCliente": 19,
+      "idBarbeiro": 4,
+      "idServico": 9,
+      "data": "17/09/2026",
+      "horario": "10:15",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 100,
+      "idCliente": 17,
+      "idBarbeiro": 4,
+      "idServico": 9,
+      "data": "11/09/2026",
+      "horario": "11:00",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 101,
+      "idCliente": 19,
+      "idBarbeiro": 3,
+      "idServico": 1,
+      "data": "14/09/2026",
+      "horario": "14:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 102,
+      "idCliente": 12,
+      "idBarbeiro": 1,
+      "idServico": 8,
+      "data": "16/10/2026",
+      "horario": "09:15",
+      "valor": 30.0,
+      "duracao": 20,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 103,
+      "idCliente": 17,
+      "idBarbeiro": 2,
+      "idServico": 1,
+      "data": "29/10/2026",
+      "horario": "10:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 104,
+      "idCliente": 1,
+      "idBarbeiro": 4,
+      "idServico": 5,
+      "data": "13/10/2026",
+      "horario": "16:15",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 105,
+      "idCliente": 14,
+      "idBarbeiro": 2,
+      "idServico": 9,
+      "data": "27/10/2026",
+      "horario": "14:15",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 106,
+      "idCliente": 12,
+      "idBarbeiro": 3,
+      "idServico": 2,
+      "data": "02/11/2026",
+      "horario": "10:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 107,
+      "idCliente": 6,
+      "idBarbeiro": 5,
+      "idServico": 3,
+      "data": "16/10/2026",
+      "horario": "15:00",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 108,
+      "idCliente": 12,
+      "idBarbeiro": 4,
+      "idServico": 1,
+      "data": "21/09/2026",
+      "horario": "17:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 109,
+      "idCliente": 19,
+      "idBarbeiro": 4,
+      "idServico": 9,
+      "data": "23/09/2026",
+      "horario": "13:45",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 110,
+      "idCliente": 5,
+      "idBarbeiro": 2,
+      "idServico": 1,
+      "data": "15/10/2026",
+      "horario": "11:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 111,
+      "idCliente": 18,
+      "idBarbeiro": 1,
+      "idServico": 1,
+      "data": "23/09/2026",
+      "horario": "16:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 112,
+      "idCliente": 21,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "31/10/2026",
+      "horario": "11:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 113,
+      "idCliente": 22,
+      "idBarbeiro": 5,
+      "idServico": 2,
+      "data": "26/10/2026",
+      "horario": "09:45",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 114,
+      "idCliente": 5,
+      "idBarbeiro": 1,
+      "idServico": 3,
+      "data": "30/10/2026",
+      "horario": "14:45",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 115,
+      "idCliente": 13,
+      "idBarbeiro": 4,
+      "idServico": 2,
+      "data": "29/09/2026",
+      "horario": "15:15",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Não Compareceu",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 116,
+      "idCliente": 1,
+      "idBarbeiro": 2,
+      "idServico": 1,
+      "data": "03/09/2026",
+      "horario": "12:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 117,
+      "idCliente": 1,
+      "idBarbeiro": 5,
+      "idServico": 3,
+      "data": "25/09/2026",
+      "horario": "14:30",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Não Compareceu",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 118,
+      "idCliente": 20,
+      "idBarbeiro": 1,
+      "idServico": 3,
+      "data": "02/09/2026",
+      "horario": "16:15",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 119,
+      "idCliente": 11,
+      "idBarbeiro": 5,
+      "idServico": 1,
+      "data": "05/10/2026",
+      "horario": "10:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 120,
+      "idCliente": 9,
+      "idBarbeiro": 1,
+      "idServico": 4,
+      "data": "16/09/2026",
+      "horario": "13:45",
+      "valor": 60.0,
+      "duracao": 45,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 121,
+      "idCliente": 10,
+      "idBarbeiro": 3,
+      "idServico": 1,
+      "data": "26/10/2026",
+      "horario": "10:15",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 122,
+      "idCliente": 2,
+      "idBarbeiro": 4,
+      "idServico": 3,
+      "data": "24/09/2026",
+      "horario": "15:15",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Concluído",
+      "pagamento": "Pago"
+    },
+    {
+      "id": 123,
+      "idCliente": 9,
+      "idBarbeiro": 2,
+      "idServico": 9,
+      "data": "31/12/2026",
+      "horario": "10:15",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 124,
+      "idCliente": 14,
+      "idBarbeiro": 3,
+      "idServico": 1,
+      "data": "18/01/2027",
+      "horario": "16:15",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 125,
+      "idCliente": 1,
+      "idBarbeiro": 4,
+      "idServico": 9,
+      "data": "03/12/2026",
+      "horario": "08:45",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 126,
+      "idCliente": 2,
+      "idBarbeiro": 3,
+      "idServico": 11,
+      "data": "25/12/2026",
+      "horario": "15:30",
+      "valor": 55.0,
+      "duracao": 40,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 127,
+      "idCliente": 23,
+      "idBarbeiro": 4,
+      "idServico": 2,
+      "data": "12/12/2026",
+      "horario": "12:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 128,
+      "idCliente": 23,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "13/01/2027",
+      "horario": "12:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 129,
+      "idCliente": 23,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "15/12/2026",
+      "horario": "14:30",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 130,
+      "idCliente": 22,
+      "idBarbeiro": 3,
+      "idServico": 2,
+      "data": "19/11/2026",
+      "horario": "15:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 131,
+      "idCliente": 15,
+      "idBarbeiro": 4,
+      "idServico": 9,
+      "data": "24/12/2026",
+      "horario": "16:45",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 132,
+      "idCliente": 8,
+      "idBarbeiro": 4,
+      "idServico": 6,
+      "data": "16/01/2027",
+      "horario": "13:00",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 133,
+      "idCliente": 6,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "10/12/2026",
+      "horario": "17:45",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 134,
+      "idCliente": 4,
+      "idBarbeiro": 1,
+      "idServico": 1,
+      "data": "16/12/2026",
+      "horario": "13:15",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 135,
+      "idCliente": 14,
+      "idBarbeiro": 3,
+      "idServico": 6,
+      "data": "12/12/2026",
+      "horario": "11:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 136,
+      "idCliente": 2,
+      "idBarbeiro": 2,
+      "idServico": 9,
+      "data": "28/11/2026",
+      "horario": "13:00",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 137,
+      "idCliente": 16,
+      "idBarbeiro": 2,
+      "idServico": 7,
+      "data": "16/01/2027",
+      "horario": "11:45",
+      "valor": 85.0,
+      "duracao": 75,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 138,
+      "idCliente": 18,
+      "idBarbeiro": 2,
+      "idServico": 5,
+      "data": "14/12/2026",
+      "horario": "16:30",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 139,
+      "idCliente": 15,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "25/11/2026",
+      "horario": "09:45",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 140,
+      "idCliente": 23,
+      "idBarbeiro": 2,
+      "idServico": 5,
+      "data": "16/12/2026",
+      "horario": "14:30",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 141,
+      "idCliente": 24,
+      "idBarbeiro": 4,
+      "idServico": 1,
+      "data": "07/01/2027",
+      "horario": "13:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 142,
+      "idCliente": 19,
+      "idBarbeiro": 1,
+      "idServico": 3,
+      "data": "13/11/2026",
+      "horario": "13:15",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 143,
+      "idCliente": 1,
+      "idBarbeiro": 4,
+      "idServico": 11,
+      "data": "04/01/2027",
+      "horario": "10:15",
+      "valor": 55.0,
+      "duracao": 40,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 144,
+      "idCliente": 2,
+      "idBarbeiro": 1,
+      "idServico": 6,
+      "data": "09/01/2027",
+      "horario": "09:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 145,
+      "idCliente": 11,
+      "idBarbeiro": 1,
+      "idServico": 8,
+      "data": "30/11/2026",
+      "horario": "14:45",
+      "valor": 30.0,
+      "duracao": 20,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 146,
+      "idCliente": 17,
+      "idBarbeiro": 2,
+      "idServico": 5,
+      "data": "04/12/2026",
+      "horario": "16:45",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 147,
+      "idCliente": 2,
+      "idBarbeiro": 2,
+      "idServico": 9,
+      "data": "05/12/2026",
+      "horario": "13:00",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 148,
+      "idCliente": 24,
+      "idBarbeiro": 3,
+      "idServico": 11,
+      "data": "03/12/2026",
+      "horario": "15:00",
+      "valor": 55.0,
+      "duracao": 40,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 149,
+      "idCliente": 22,
+      "idBarbeiro": 1,
+      "idServico": 3,
+      "data": "28/11/2026",
+      "horario": "10:15",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 150,
+      "idCliente": 22,
+      "idBarbeiro": 1,
+      "idServico": 2,
+      "data": "17/12/2026",
+      "horario": "17:30",
+      "valor": 30.0,
+      "duracao": 30,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 151,
+      "idCliente": 12,
+      "idBarbeiro": 1,
+      "idServico": 4,
+      "data": "16/01/2027",
+      "horario": "13:00",
+      "valor": 60.0,
+      "duracao": 45,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 152,
+      "idCliente": 6,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "05/01/2027",
+      "horario": "17:00",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 153,
+      "idCliente": 17,
+      "idBarbeiro": 4,
+      "idServico": 1,
+      "data": "08/12/2026",
+      "horario": "16:30",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 154,
+      "idCliente": 24,
+      "idBarbeiro": 4,
+      "idServico": 11,
+      "data": "04/12/2026",
+      "horario": "10:00",
+      "valor": 55.0,
+      "duracao": 40,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 155,
+      "idCliente": 10,
+      "idBarbeiro": 3,
+      "idServico": 1,
+      "data": "30/11/2026",
+      "horario": "11:45",
+      "valor": 40.0,
+      "duracao": 30,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 156,
+      "idCliente": 15,
+      "idBarbeiro": 4,
+      "idServico": 9,
+      "data": "11/12/2026",
+      "horario": "16:15",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 157,
+      "idCliente": 23,
+      "idBarbeiro": 4,
+      "idServico": 9,
+      "data": "10/12/2026",
+      "horario": "13:45",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 158,
+      "idCliente": 21,
+      "idBarbeiro": 3,
+      "idServico": 4,
+      "data": "14/11/2026",
+      "horario": "14:00",
+      "valor": 60.0,
+      "duracao": 45,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 159,
+      "idCliente": 7,
+      "idBarbeiro": 2,
+      "idServico": 5,
+      "data": "10/11/2026",
+      "horario": "11:45",
+      "valor": 50.0,
+      "duracao": 45,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 160,
+      "idCliente": 25,
+      "idBarbeiro": 1,
+      "idServico": 3,
+      "data": "19/12/2026",
+      "horario": "09:15",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 161,
+      "idCliente": 6,
+      "idBarbeiro": 2,
+      "idServico": 9,
+      "data": "26/01/2027",
+      "horario": "10:00",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Confirmado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 162,
+      "idCliente": 12,
+      "idBarbeiro": 4,
+      "idServico": 8,
+      "data": "11/11/2026",
+      "horario": "08:45",
+      "valor": 30.0,
+      "duracao": 20,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 163,
+      "idCliente": 20,
+      "idBarbeiro": 2,
+      "idServico": 9,
+      "data": "18/11/2026",
+      "horario": "16:15",
+      "valor": 100.0,
+      "duracao": 90,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 164,
+      "idCliente": 12,
+      "idBarbeiro": 3,
+      "idServico": 11,
+      "data": "12/01/2027",
+      "horario": "16:45",
+      "valor": 55.0,
+      "duracao": 40,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    },
+    {
+      "id": 165,
+      "idCliente": 12,
+      "idBarbeiro": 2,
+      "idServico": 3,
+      "data": "11/12/2026",
+      "horario": "14:15",
+      "valor": 60.0,
+      "duracao": 60,
+      "status": "Agendado",
+      "pagamento": "Pendente"
+    }
+  ],
+  "HorarioTrabalho": [
+    {
+      "id": 1,
+      "idBarbeiro": 1,
+      "diaSemana": "Segunda-feira",
+      "horarioInicial": "08:00",
+      "horarioFinal": "18:00",
+      "inicioIntervalo": "12:00",
+      "fimIntervalo": "13:00"
+    },
+    {
+      "id": 2,
+      "idBarbeiro": 1,
+      "diaSemana": "Terça-feira",
+      "horarioInicial": "08:00",
+      "horarioFinal": "18:00",
+      "inicioIntervalo": "12:00",
+      "fimIntervalo": "13:00"
+    },
+    {
+      "id": 3,
+      "idBarbeiro": 2,
+      "diaSemana": "Segunda-feira",
+      "horarioInicial": "09:00",
+      "horarioFinal": "19:00",
+      "inicioIntervalo": "13:00",
+      "fimIntervalo": "14:00"
+    },
+    {
+      "id": 4,
+      "idBarbeiro": 2,
+      "diaSemana": "Quarta-feira",
+      "horarioInicial": "09:00",
+      "horarioFinal": "19:00",
+      "inicioIntervalo": "13:00",
+      "fimIntervalo": "14:00"
+    },
+    {
+      "id": 5,
+      "idBarbeiro": 3,
+      "diaSemana": "Sexta-feira",
+      "horarioInicial": "08:00",
+      "horarioFinal": "17:00",
+      "inicioIntervalo": "12:00",
+      "fimIntervalo": "13:00"
+    },
+    {
+      "id": 6,
+      "idBarbeiro": 1,
+      "diaSemana": "Quarta-feira",
+      "horarioInicial": "08:00",
+      "horarioFinal": "18:00",
+      "inicioIntervalo": "12:00",
+      "fimIntervalo": "13:00"
+    },
+    {
+      "id": 7,
+      "idBarbeiro": 1,
+      "diaSemana": "Quinta-feira",
+      "horarioInicial": "08:00",
+      "horarioFinal": "18:00",
+      "inicioIntervalo": "12:00",
+      "fimIntervalo": "13:00"
+    },
+    {
+      "id": 8,
+      "idBarbeiro": 1,
+      "diaSemana": "Sexta-feira",
+      "horarioInicial": "08:00",
+      "horarioFinal": "19:00",
+      "inicioIntervalo": "12:00",
+      "fimIntervalo": "13:00"
+    },
+    {
+      "id": 9,
+      "idBarbeiro": 1,
+      "diaSemana": "Sábado",
+      "horarioInicial": "08:00",
+      "horarioFinal": "14:00",
+      "inicioIntervalo": "",
+      "fimIntervalo": ""
+    },
+    {
+      "id": 10,
+      "idBarbeiro": 2,
+      "diaSemana": "Terça-feira",
+      "horarioInicial": "09:00",
+      "horarioFinal": "19:00",
+      "inicioIntervalo": "13:00",
+      "fimIntervalo": "14:00"
+    },
+    {
+      "id": 11,
+      "idBarbeiro": 2,
+      "diaSemana": "Quinta-feira",
+      "horarioInicial": "09:00",
+      "horarioFinal": "19:00",
+      "inicioIntervalo": "13:00",
+      "fimIntervalo": "14:00"
+    },
+    {
+      "id": 12,
+      "idBarbeiro": 2,
+      "diaSemana": "Sexta-feira",
+      "horarioInicial": "09:00",
+      "horarioFinal": "19:00",
+      "inicioIntervalo": "13:00",
+      "fimIntervalo": "14:00"
+    },
+    {
+      "id": 13,
+      "idBarbeiro": 2,
+      "diaSemana": "Sábado",
+      "horarioInicial": "09:00",
+      "horarioFinal": "15:00",
+      "inicioIntervalo": "",
+      "fimIntervalo": ""
+    },
+    {
+      "id": 14,
+      "idBarbeiro": 3,
+      "diaSemana": "Segunda-feira",
+      "horarioInicial": "10:00",
+      "horarioFinal": "18:00",
+      "inicioIntervalo": "13:00",
+      "fimIntervalo": "14:00"
+    },
+    {
+      "id": 15,
+      "idBarbeiro": 3,
+      "diaSemana": "Terça-feira",
+      "horarioInicial": "10:00",
+      "horarioFinal": "18:00",
+      "inicioIntervalo": "13:00",
+      "fimIntervalo": "14:00"
+    },
+    {
+      "id": 16,
+      "idBarbeiro": 3,
+      "diaSemana": "Quarta-feira",
+      "horarioInicial": "10:00",
+      "horarioFinal": "18:00",
+      "inicioIntervalo": "13:00",
+      "fimIntervalo": "14:00"
+    },
+    {
+      "id": 17,
+      "idBarbeiro": 3,
+      "diaSemana": "Quinta-feira",
+      "horarioInicial": "10:00",
+      "horarioFinal": "18:00",
+      "inicioIntervalo": "13:00",
+      "fimIntervalo": "14:00"
+    },
+    {
+      "id": 18,
+      "idBarbeiro": 3,
+      "diaSemana": "Sábado",
+      "horarioInicial": "09:00",
+      "horarioFinal": "15:00",
+      "inicioIntervalo": "",
+      "fimIntervalo": ""
+    },
+    {
+      "id": 19,
+      "idBarbeiro": 4,
+      "diaSemana": "Segunda-feira",
+      "horarioInicial": "08:30",
+      "horarioFinal": "18:30",
+      "inicioIntervalo": "12:30",
+      "fimIntervalo": "13:30"
+    },
+    {
+      "id": 20,
+      "idBarbeiro": 4,
+      "diaSemana": "Terça-feira",
+      "horarioInicial": "08:30",
+      "horarioFinal": "18:30",
+      "inicioIntervalo": "12:30",
+      "fimIntervalo": "13:30"
+    },
+    {
+      "id": 21,
+      "idBarbeiro": 4,
+      "diaSemana": "Quarta-feira",
+      "horarioInicial": "08:30",
+      "horarioFinal": "18:30",
+      "inicioIntervalo": "12:30",
+      "fimIntervalo": "13:30"
+    },
+    {
+      "id": 22,
+      "idBarbeiro": 4,
+      "diaSemana": "Quinta-feira",
+      "horarioInicial": "08:30",
+      "horarioFinal": "18:30",
+      "inicioIntervalo": "12:30",
+      "fimIntervalo": "13:30"
+    },
+    {
+      "id": 23,
+      "idBarbeiro": 4,
+      "diaSemana": "Sexta-feira",
+      "horarioInicial": "08:30",
+      "horarioFinal": "19:00",
+      "inicioIntervalo": "12:30",
+      "fimIntervalo": "13:30"
+    },
+    {
+      "id": 24,
+      "idBarbeiro": 4,
+      "diaSemana": "Sábado",
+      "horarioInicial": "08:30",
+      "horarioFinal": "15:00",
+      "inicioIntervalo": "",
+      "fimIntervalo": ""
+    },
+    {
+      "id": 25,
+      "idBarbeiro": 5,
+      "diaSemana": "Segunda-feira",
+      "horarioInicial": "09:00",
+      "horarioFinal": "17:00",
+      "inicioIntervalo": "12:00",
+      "fimIntervalo": "13:00"
+    },
+    {
+      "id": 26,
+      "idBarbeiro": 5,
+      "diaSemana": "Quarta-feira",
+      "horarioInicial": "09:00",
+      "horarioFinal": "17:00",
+      "inicioIntervalo": "12:00",
+      "fimIntervalo": "13:00"
+    },
+    {
+      "id": 27,
+      "idBarbeiro": 5,
+      "diaSemana": "Sexta-feira",
+      "horarioInicial": "09:00",
+      "horarioFinal": "17:00",
+      "inicioIntervalo": "12:00",
+      "fimIntervalo": "13:00"
+    }
+  ],
+  "Indisponibilidade": [
+    {
+      "id": 1,
+      "idBarbeiro": 1,
+      "data": "29/09/2026",
+      "horarioInicial": "14:00",
+      "horarioFinal": "16:00",
+      "motivo": "Compromisso Pessoal",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 2,
+      "idBarbeiro": 1,
+      "data": "06/10/2026",
+      "horarioInicial": "08:00",
+      "horarioFinal": "12:00",
+      "motivo": "Folga",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 3,
+      "idBarbeiro": 2,
+      "data": "05/10/2026",
+      "horarioInicial": "09:00",
+      "horarioFinal": "13:00",
+      "motivo": "Férias",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 4,
+      "idBarbeiro": 3,
+      "data": "02/10/2026",
+      "horarioInicial": "13:00",
+      "horarioFinal": "17:00",
+      "motivo": "Atestado",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 5,
+      "idBarbeiro": 2,
+      "data": "14/10/2026",
+      "horarioInicial": "15:00",
+      "horarioFinal": "17:00",
+      "motivo": "Outro",
+      "descricaoMotivo": "Compromisso familiar"
+    },
+    {
+      "id": 6,
+      "idBarbeiro": 1,
+      "data": "10/11/2026",
+      "horarioInicial": "14:00",
+      "horarioFinal": "15:30",
+      "motivo": "Compromisso Pessoal",
+      "descricaoMotivo": "Consulta médica"
+    },
+    {
+      "id": 7,
+      "idBarbeiro": 4,
+      "data": "12/11/2026",
+      "horarioInicial": "15:00",
+      "horarioFinal": "16:00",
+      "motivo": "Outro",
+      "descricaoMotivo": "Treinamento profissional"
+    },
+    {
+      "id": 8,
+      "idBarbeiro": 3,
+      "data": "13/11/2026",
+      "horarioInicial": "10:00",
+      "horarioFinal": "11:00",
+      "motivo": "Compromisso Pessoal",
+      "descricaoMotivo": "Assunto particular"
+    },
+    {
+      "id": 9,
+      "idBarbeiro": 2,
+      "data": "18/11/2026",
+      "horarioInicial": "14:00",
+      "horarioFinal": "16:00",
+      "motivo": "Folga",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 10,
+      "idBarbeiro": 1,
+      "data": "21/11/2026",
+      "horarioInicial": "09:00",
+      "horarioFinal": "11:00",
+      "motivo": "Outro",
+      "descricaoMotivo": "Compromisso familiar"
+    },
+    {
+      "id": 11,
+      "idBarbeiro": 4,
+      "data": "26/11/2026",
+      "horarioInicial": "08:30",
+      "horarioFinal": "12:30",
+      "motivo": "Atestado",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 12,
+      "idBarbeiro": 3,
+      "data": "04/12/2026",
+      "horarioInicial": "14:00",
+      "horarioFinal": "17:00",
+      "motivo": "Folga",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 13,
+      "idBarbeiro": 2,
+      "data": "09/12/2026",
+      "horarioInicial": "09:00",
+      "horarioFinal": "11:00",
+      "motivo": "Compromisso Pessoal",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 14,
+      "idBarbeiro": 1,
+      "data": "15/12/2026",
+      "horarioInicial": "13:00",
+      "horarioFinal": "16:00",
+      "motivo": "Outro",
+      "descricaoMotivo": "Treinamento"
+    },
+    {
+      "id": 15,
+      "idBarbeiro": 4,
+      "data": "19/12/2026",
+      "horarioInicial": "08:30",
+      "horarioFinal": "11:00",
+      "motivo": "Folga",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 16,
+      "idBarbeiro": 3,
+      "data": "08/01/2027",
+      "horarioInicial": "10:00",
+      "horarioFinal": "12:00",
+      "motivo": "Compromisso Pessoal",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 17,
+      "idBarbeiro": 2,
+      "data": "13/01/2027",
+      "horarioInicial": "16:00",
+      "horarioFinal": "18:00",
+      "motivo": "Outro",
+      "descricaoMotivo": "Manutenção do equipamento"
+    },
+    {
+      "id": 18,
+      "idBarbeiro": 1,
+      "data": "19/01/2027",
+      "horarioInicial": "08:00",
+      "horarioFinal": "10:00",
+      "motivo": "Folga",
+      "descricaoMotivo": ""
+    },
+    {
+      "id": 19,
+      "idBarbeiro": 4,
+      "data": "30/01/2027",
+      "horarioInicial": "12:00",
+      "horarioFinal": "14:00",
+      "motivo": "Compromisso Pessoal",
+      "descricaoMotivo": ""
+    }
+  ],
+  "Despesa": [
+    {
+      "id": 1,
+      "idAdministrador": 1,
+      "descricao": "Compra de pomadas, gel e shampoos",
+      "categoria": "Produtos",
+      "data": "05/09/2026",
+      "valor": 320.5
+    },
+    {
+      "id": 2,
+      "idAdministrador": 1,
+      "descricao": "Conta de energia elétrica",
+      "categoria": "Contas",
+      "data": "08/09/2026",
+      "valor": 430.8
+    },
+    {
+      "id": 3,
+      "idAdministrador": 1,
+      "descricao": "Aluguel do ponto comercial",
+      "categoria": "Aluguel",
+      "data": "10/09/2026",
+      "valor": 2800.0
+    },
+    {
+      "id": 4,
+      "idAdministrador": 1,
+      "descricao": "Manutenção das máquinas de corte",
+      "categoria": "Manutenção",
+      "data": "15/09/2026",
+      "valor": 195.0
+    },
+    {
+      "id": 5,
+      "idAdministrador": 1,
+      "descricao": "Materiais de limpeza",
+      "categoria": "Outros",
+      "data": "20/09/2026",
+      "valor": 135.7
+    },
+    {
+      "id": 6,
+      "idAdministrador": 1,
+      "descricao": "Compra de lâminas descartáveis",
+      "categoria": "Produtos",
+      "data": "23/09/2026",
+      "valor": 189.9
+    },
+    {
+      "id": 7,
+      "idAdministrador": 1,
+      "descricao": "Conta de água",
+      "categoria": "Contas",
+      "data": "26/09/2026",
+      "valor": 142.3
+    },
+    {
+      "id": 8,
+      "idAdministrador": 1,
+      "descricao": "Serviço de contabilidade",
+      "categoria": "Outros",
+      "data": "29/09/2026",
+      "valor": 380.0
+    },
+    {
+      "id": 9,
+      "idAdministrador": 1,
+      "descricao": "Reposição de produtos para barba",
+      "categoria": "Produtos",
+      "data": "02/10/2026",
+      "valor": 265.9
+    },
+    {
+      "id": 10,
+      "idAdministrador": 1,
+      "descricao": "Conta de internet",
+      "categoria": "Contas",
+      "data": "05/10/2026",
+      "valor": 119.9
+    },
+    {
+      "id": 11,
+      "idAdministrador": 1,
+      "descricao": "Conta de energia elétrica",
+      "categoria": "Contas",
+      "data": "08/10/2026",
+      "valor": 457.6
+    },
+    {
+      "id": 12,
+      "idAdministrador": 1,
+      "descricao": "Aluguel do ponto comercial",
+      "categoria": "Aluguel",
+      "data": "10/10/2026",
+      "valor": 2800.0
+    },
+    {
+      "id": 13,
+      "idAdministrador": 1,
+      "descricao": "Compra de toalhas para atendimento",
+      "categoria": "Produtos",
+      "data": "12/10/2026",
+      "valor": 240.0
+    },
+    {
+      "id": 14,
+      "idAdministrador": 1,
+      "descricao": "Troca de lâmina de máquina de corte",
+      "categoria": "Manutenção",
+      "data": "15/10/2026",
+      "valor": 160.0
+    },
+    {
+      "id": 15,
+      "idAdministrador": 1,
+      "descricao": "Conta de água",
+      "categoria": "Contas",
+      "data": "18/10/2026",
+      "valor": 149.8
+    },
+    {
+      "id": 16,
+      "idAdministrador": 1,
+      "descricao": "Café e água para clientes",
+      "categoria": "Outros",
+      "data": "21/10/2026",
+      "valor": 125.5
+    },
+    {
+      "id": 17,
+      "idAdministrador": 1,
+      "descricao": "Reposição de navalhas e lâminas",
+      "categoria": "Produtos",
+      "data": "24/10/2026",
+      "valor": 235.9
+    },
+    {
+      "id": 18,
+      "idAdministrador": 1,
+      "descricao": "Manutenção do ar-condicionado",
+      "categoria": "Manutenção",
+      "data": "28/10/2026",
+      "valor": 320.0
+    },
+    {
+      "id": 19,
+      "idAdministrador": 1,
+      "descricao": "Serviço de contabilidade",
+      "categoria": "Outros",
+      "data": "30/10/2026",
+      "valor": 380.0
+    },
+    {
+      "id": 20,
+      "idAdministrador": 1,
+      "descricao": "Reposição de shampoo e finalizadores",
+      "categoria": "Produtos",
+      "data": "02/11/2026",
+      "valor": 289.7
+    },
+    {
+      "id": 21,
+      "idAdministrador": 1,
+      "descricao": "Conta de internet",
+      "categoria": "Contas",
+      "data": "03/11/2026",
+      "valor": 119.9
+    },
+    {
+      "id": 22,
+      "idAdministrador": 1,
+      "descricao": "Materiais de limpeza",
+      "categoria": "Outros",
+      "data": "04/11/2026",
+      "valor": 110.0
+    },
+    {
+      "id": 23,
+      "idAdministrador": 1,
+      "descricao": "Manutenção de cadeira hidráulica",
+      "categoria": "Manutenção",
+      "data": "05/11/2026",
+      "valor": 185.0
+    }
+  ]
 }
