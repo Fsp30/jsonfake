@@ -8,7 +8,7 @@
     { "id": 6, "nome": "TechCore Componentes", "email": "techcore@email.com", "senhaHash": "123", "dataCadastro": "2026-09-18" },
     { "id": 7, "nome": "Retro & Cia", "email": "retroecia@email.com", "senhaHash": "123", "dataCadastro": "2026-09-18" },
     { "id": 8, "nome": "Esporte Total", "email": "esportetotal@email.com", "senhaHash": "123", "dataCadastro": "2026-09-18" },
-    { "id": 9, "nome": "Admin Plataforma", "email": "admin@email.com", "senhaHash": "123", "dataCadastro": "2026-09-01" }
+    { "id": 9, "nome": "Admin Plataforma", "email": "admin@email.com", "senhaHash": "123", "dataCadastro": "2026-09-01" },
     {
   "id": 10,
   "nome": "Livraria Saber",
