@@ -1,4 +1,4 @@
-```json
+
 {
   "usuarios": [
     { "id": 1, "nome": "Usuario01", "email": "usuario01@email.com", "senhaHash": "123", "dataCadastro": "2026-09-20" },
@@ -431,4 +431,4 @@
     { "id": 3, "idUsuario": 3, "usuarioTipo": "CLIENTE", "idSubpedido": 3, "tipo": "REEMBOLSO_EM_ANALISE", "canal": "PLATAFORMA_E_EMAIL", "mensagem": "Sua solicitação de reembolso está em análise", "dataEnvio": "2026-09-26T09:20:00", "lida": false }
   ]
 }
-```
+
