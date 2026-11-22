@@ -9,6 +9,62 @@
     { "id": 7, "nome": "Retro & Cia", "email": "retroecia@email.com", "senhaHash": "123", "dataCadastro": "2026-09-18" },
     { "id": 8, "nome": "Esporte Total", "email": "esportetotal@email.com", "senhaHash": "123", "dataCadastro": "2026-09-18" },
     { "id": 9, "nome": "Admin Plataforma", "email": "admin@email.com", "senhaHash": "123", "dataCadastro": "2026-09-01" }
+    {
+  "id": 10,
+  "nome": "Livraria Saber",
+  "email": "livrariasaber@email.com",
+  "senhaHash": "123",
+  "dataCadastro": "2026-09-18"
+},
+{
+  "id": 11,
+  "nome": "Casa & Estilo",
+  "email": "casaestilo@email.com",
+  "senhaHash": "123",
+  "dataCadastro": "2026-09-18"
+},
+{
+  "id": 12,
+  "nome": "Pet Amigo",
+  "email": "petamigo@email.com",
+  "senhaHash": "123",
+  "dataCadastro": "2026-09-18"
+},
+{
+  "id": 13,
+  "nome": "Bella Moda",
+  "email": "bellamoda@email.com",
+  "senhaHash": "123",
+  "dataCadastro": "2026-09-18"
+},
+{
+  "id": 14,
+  "nome": "Mundo Kids",
+  "email": "mundokids@email.com",
+  "senhaHash": "123",
+  "dataCadastro": "2026-09-18"
+},
+{
+  "id": 15,
+  "nome": "Auto Peças Silva",
+  "email": "autopecassilva@email.com",
+  "senhaHash": "123",
+  "dataCadastro": "2026-09-18"
+},
+{
+  "id": 16,
+  "nome": "Farmácia Vida",
+  "email": "farmaciavida@email.com",
+  "senhaHash": "123",
+  "dataCadastro": "2026-09-18"
+},
+{
+  "id": 17,
+  "nome": "Doce Sabor",
+  "email": "docesabor@email.com",
+  "senhaHash": "123",
+  "dataCadastro": "2026-09-18"
+}
   ],
 
   "clientes": [
@@ -22,7 +78,87 @@
   "empresas": [
     { "id": 1, "idUsuario": 6, "razaoSocial": "TechCore Componentes LTDA", "nomeFantasia": "TechCore Componentes", "cnpj": "11222333000144", "inscricaoEstadual": "111222333", "inscricaoMunicipal": "444555666", "responsavelLegal": "Carlos Andrade", "telefone": "3232222222", "logradouro": "Av. Brasil", "cep": "36010000", "numeroResidencial": "100", "complemento": "Sala 2", "bairro": "Centro", "cidade": "Juiz de Fora", "uf": "MG", "logoUrl": "", "descricao": "Componentes de hardware e periféricos", "status": "ATIVO", "statusVerificacao": "VERIFICADA" },
     { "id": 2, "idUsuario": 7, "razaoSocial": "Retro & Cia Comercio LTDA", "nomeFantasia": "Retro & Cia", "cnpj": "22333444000155", "inscricaoEstadual": "222333444", "inscricaoMunicipal": "555666777", "responsavelLegal": "Mariana Souza", "telefone": "3233333333", "logradouro": "Rua das Flores", "cep": "36020000", "numeroResidencial": "200", "complemento": "", "bairro": "São Mateus", "cidade": "Juiz de Fora", "uf": "MG", "logoUrl": "", "descricao": "Produtos esportivos licenciados e itens colecionáveis", "status": "ATIVO", "statusVerificacao": "SOLICITADA" },
-    { "id": 3, "idUsuario": 8, "razaoSocial": "Esporte Total Distribuidora LTDA", "nomeFantasia": "Esporte Total", "cnpj": "33444555000166", "inscricaoEstadual": "333444555", "inscricaoMunicipal": "666777888", "responsavelLegal": "Paulo Lima", "telefone": "3234444444", "logradouro": "Rua do Comércio", "cep": "36030000", "numeroResidencial": "300", "complemento": "Loja 5", "bairro": "Bom Pastor", "cidade": "Juiz de Fora", "uf": "MG", "logoUrl": "", "descricao": "Artigos esportivos em geral", "status": "ATIVO", "statusVerificacao": "NAO_VERIFICADA" }
+    { "id": 3, "idUsuario": 8, "razaoSocial": "Esporte Total Distribuidora LTDA", "nomeFantasia": "Esporte Total", "cnpj": "33444555000166", "inscricaoEstadual": "333444555", "inscricaoMunicipal": "666777888", "responsavelLegal": "Paulo Lima", "telefone": "3234444444", "logradouro": "Rua do Comércio", "cep": "36030000", "numeroResidencial": "300", "complemento": "Loja 5", "bairro": "Bom Pastor", "cidade": "Juiz de Fora", "uf": "MG", "logoUrl": "", "descricao": "Artigos esportivos em geral", "status": "ATIVO", "statusVerificacao": "NAO_VERIFICADA" },
+    {
+  "id": 4,
+  "idUsuario": 10,
+  "razaoSocial": "Livraria Saber Comércio de Livros LTDA",
+  "nomeFantasia": "Livraria Saber",
+  "cnpj": "22333444000155",
+  "inscricaoEstadual": "222333444",
+  "inscricaoMunicipal": "555666777",
+  "responsavelLegal": "Ana Paula Ribeiro"
+},
+{
+  "id": 5,
+  "idUsuario": 11,
+  "razaoSocial": "Casa & Estilo Decorações LTDA",
+  "nomeFantasia": "Casa & Estilo",
+  "cnpj": "33444555000166",
+  "inscricaoEstadual": "333444555",
+  "inscricaoMunicipal": "666777888",
+  "responsavelLegal": "Marcos Vinícius Almeida"
+},
+{
+  "id": 6,
+  "idUsuario": 12,
+  "razaoSocial": "Pet Amigo Produtos Veterinários LTDA",
+  "nomeFantasia": "Pet Amigo",
+  "cnpj": "44555666000177",
+  "inscricaoEstadual": "444555666",
+  "inscricaoMunicipal": "777888999",
+  "responsavelLegal": "Juliana Costa Ferreira"
+},
+{
+  "id": 7,
+  "idUsuario": 13,
+  "razaoSocial": "Bella Moda Confecções LTDA",
+  "nomeFantasia": "Bella Moda",
+  "cnpj": "55666777000188",
+  "inscricaoEstadual": "555666777",
+  "inscricaoMunicipal": "888999000",
+  "responsavelLegal": "Fernanda Lima Souza"
+},
+{
+  "id": 8,
+  "idUsuario": 14,
+  "razaoSocial": "Mundo Kids Brinquedos e Vestuário LTDA",
+  "nomeFantasia": "Mundo Kids",
+  "cnpj": "66777888000199",
+  "inscricaoEstadual": "666777888",
+  "inscricaoMunicipal": "999000111",
+  "responsavelLegal": "Roberto Carlos Nunes"
+},
+{
+  "id": 9,
+  "idUsuario": 15,
+  "razaoSocial": "Auto Peças Silva Comércio LTDA",
+  "nomeFantasia": "Auto Peças Silva",
+  "cnpj": "77888999000100",
+  "inscricaoEstadual": "777888999",
+  "inscricaoMunicipal": "000111222",
+  "responsavelLegal": "Paulo Henrique Silva"
+},
+{
+  "id": 10,
+  "idUsuario": 16,
+  "razaoSocial": "Farmácia Vida Drogaria LTDA",
+  "nomeFantasia": "Farmácia Vida",
+  "cnpj": "88999000111",
+  "inscricaoEstadual": "888999000",
+  "inscricaoMunicipal": "111222333",
+  "responsavelLegal": "Camila Rodrigues Mendes"
+},
+{
+  "id":  11,
+  "idUsuario": 17,
+  "razaoSocial": "Doce Sabor Confeitaria LTDA",
+  "nomeFantasia": "Doce Sabor",
+  "cnpj": "99000111222",
+  "inscricaoEstadual": "999000111",
+  "inscricaoMunicipal": "222333444",
+  "responsavelLegal": "Larissa Alves Pereira"
+}
   ],
 
   "administradores": [
@@ -52,6 +188,229 @@
     { "id": 3, "empresa": 2, "titulo": "Camisa Flamengo", "descricao": "Oficial 2026", "preco": 350.00, "precoPromocional": null, "dataPromocaoInicio": null, "dataPromocaoFim": null, "custo": 150.00, "estoqueQuantidade": 40, "estoqueReservado": 5, "condicao": "NOVO", "freteGratis": true, "status": "ATIVO", "fotos": [""], "notaMedia": 4.9, "percentualRecomendacao": 98.0, "dataCadastro": "2026-09-20" },
     { "id": 4, "empresa": 2, "titulo": "GBA Lite", "descricao": "Console Portatil", "preco": 450.00, "precoPromocional": null, "dataPromocaoInicio": null, "dataPromocaoFim": null, "custo": 200.00, "estoqueQuantidade": 8, "estoqueReservado": 0, "condicao": "NOVO", "freteGratis": false, "status": "ATIVO", "fotos": [""], "notaMedia": 4.5, "percentualRecomendacao": 90.0, "dataCadastro": "2026-09-20" },
     { "id": 5, "empresa": 3, "titulo": "Bola Oficial", "descricao": "Bola de Campo", "preco": 120.00, "precoPromocional": null, "dataPromocaoInicio": null, "dataPromocaoFim": null, "custo": 50.00, "estoqueQuantidade": 25, "estoqueReservado": 2, "condicao": "NOVO", "freteGratis": false, "status": "ATIVO", "fotos": [""], "notaMedia": 4.7, "percentualRecomendacao": 92.0, "dataCadastro": "2026-09-20" }
+  [
+  {
+    "id": 6,
+    "empresa": 1,
+    "titulo": "SSD NVMe 1TB",
+    "descricao": "Armazenamento de Alta Velocidade",
+    "preco": 480,
+    "precoPromocional": 420,
+    "dataPromocaoInicio": "2026-09-20",
+    "dataPromocaoFim": "2026-10-05",
+    "custo": 320,
+    "estoqueQuantidade": 30,
+    "estoqueReservado": 3,
+    "condicao": "NOVO",
+    "freteGratis": true,
+    "status": "ATIVO",
+    "fotos": [
+      ""
+    ],
+    "notaMedia": 4.9,
+    "percentualRecomendacao": 97,
+    "dataCadastro": "2026-09-20"
+  },
+  {
+    "id": 7,
+    "empresa": 1,
+    "titulo": "Memória RAM DDR4 16GB",
+    "descricao": "Módulo 3200MHz",
+    "preco": 280,
+    "precoPromocional": null,
+    "dataPromocaoInicio": null,
+    "dataPromocaoFim": null,
+    "custo": 180,
+    "estoqueQuantidade": 50,
+    "estoqueReservado": 0,
+    "condicao": "NOVO",
+    "freteGratis": false,
+    "status": "ATIVO",
+    "fotos": [
+      ""
+    ],
+    "notaMedia": 4.7,
+    "percentualRecomendacao": 93,
+    "dataCadastro": "2026-09-20"
+  },
+  {
+    "id": 8,
+    "empresa": 1,
+    "titulo": "Fonte 650W 80 Plus Bronze",
+    "descricao": "Fonte de Alimentação",
+    "preco": 390,
+    "precoPromocional": 350,
+    "dataPromocaoInicio": "2026-09-20",
+    "dataPromocaoFim": "2026-09-30",
+    "custo": 260,
+    "estoqueQuantidade": 20,
+    "estoqueReservado": 1,
+    "condicao": "NOVO",
+    "freteGratis": true,
+    "status": "ATIVO",
+    "fotos": [
+      ""
+    ],
+    "notaMedia": 4.6,
+    "percentualRecomendacao": 91,
+    "dataCadastro": "2026-09-20"
+  },
+  {
+    "id": 9,
+    "empresa": 3,
+    "titulo": "Camisa Corinthians",
+    "descricao": "Oficial 2026",
+    "preco": 350,
+    "precoPromocional": 320,
+    "dataPromocaoInicio": "2026-09-20",
+    "dataPromocaoFim": "2026-10-10",
+    "custo": 150,
+    "estoqueQuantidade": 35,
+    "estoqueReservado": 4,
+    "condicao": "NOVO",
+    "freteGratis": true,
+    "status": "ATIVO",
+    "fotos": [
+      ""
+    ],
+    "notaMedia": 4.8,
+    "percentualRecomendacao": 96,
+    "dataCadastro": "2026-09-20"
+  },
+  {
+    "id": 10,
+    "empresa": 2,
+    "titulo": "Mega Drive Mini",
+    "descricao": "Console Retrô",
+    "preco": 500,
+    "precoPromocional": null,
+    "dataPromocaoInicio": null,
+    "dataPromocaoFim": null,
+    "custo": 280,
+    "estoqueQuantidade": 10,
+    "estoqueReservado": 1,
+    "condicao": "NOVO",
+    "freteGratis": false,
+    "status": "ATIVO",
+    "fotos": [
+      ""
+    ],
+    "notaMedia": 4.6,
+    "percentualRecomendacao": 89,
+    "dataCadastro": "2026-09-20"
+  },
+  {
+    "id": 11,
+    "empresa": 2,
+    "titulo": "Cartucho Super Mario World",
+    "descricao": "SNES Original",
+    "preco": 220,
+    "precoPromocional": null,
+    "dataPromocaoInicio": null,
+    "dataPromocaoFim": null,
+    "custo": 120,
+    "estoqueQuantidade": 6,
+    "estoqueReservado": 0,
+    "condicao": "USADO",
+    "freteGratis": false,
+    "status": "ATIVO",
+    "fotos": [
+      ""
+    ],
+    "notaMedia": 4.4,
+    "percentualRecomendacao": 85,
+    "dataCadastro": "2026-09-20"
+  },
+  {
+    "id": 12,
+    "empresa": 3,
+    "titulo": "Chuteira Society",
+    "descricao": "Chuteira para Campo de Grama Sintética",
+    "preco": 250,
+    "precoPromocional": 210,
+    "dataPromocaoInicio": "2026-09-20",
+    "dataPromocaoFim": "2026-10-01",
+    "custo": 130,
+    "estoqueQuantidade": 18,
+    "estoqueReservado": 2,
+    "condicao": "NOVO",
+    "freteGratis": true,
+    "status": "ATIVO",
+    "fotos": [
+      ""
+    ],
+    "notaMedia": 4.5,
+    "percentualRecomendacao": 88,
+    "dataCadastro": "2026-09-20"
+  },
+  {
+    "id": 13,
+    "empresa": 3,
+    "titulo": "Camisa Brasil",
+    "descricao": "Oficial 2026",
+    "preco": 380,
+    "precoPromocional": null,
+    "dataPromocaoInicio": null,
+    "dataPromocaoFim": null,
+    "custo": 180,
+    "estoqueQuantidade": 22,
+    "estoqueReservado": 3,
+    "condicao": "NOVO",
+    "freteGratis": true,
+    "status": "ATIVO",
+    "fotos": [
+      ""
+    ],
+    "notaMedia": 4.9,
+    "percentualRecomendacao": 98,
+    "dataCadastro": "2026-09-20"
+  },
+  {
+    "id": 14,
+    "empresa": 4,
+    "titulo": "Kit Halteres 20kg",
+    "descricao": "Par de Halteres Ajustáveis",
+    "preco": 420,
+    "precoPromocional": 380,
+    "dataPromocaoInicio": "2026-09-20",
+    "dataPromocaoFim": "2026-10-15",
+    "custo": 250,
+    "estoqueQuantidade": 12,
+    "estoqueReservado": 0,
+    "condicao": "NOVO",
+    "freteGratis": false,
+    "status": "ATIVO",
+    "fotos": [
+      ""
+    ],
+    "notaMedia": 4.7,
+    "percentualRecomendacao": 94,
+    "dataCadastro": "2026-09-20"
+  },
+  {
+    "id": 15,
+    "empresa": 3,
+    "titulo": "Luvas de Goleiro",
+    "descricao": "Luvas Profissionais",
+    "preco": 150,
+    "precoPromocional": null,
+    "dataPromocaoInicio": null,
+    "dataPromocaoFim": null,
+    "custo": 70,
+    "estoqueQuantidade": 14,
+    "estoqueReservado": 1,
+    "condicao": "NOVO",
+    "freteGratis": false,
+    "status": "ATIVO",
+    "fotos": [
+      ""
+    ],
+    "notaMedia": 4.3,
+    "percentualRecomendacao": 84,
+    "dataCadastro": "2026-09-20"
+  }
+]
+  
   ],
 
   "carrinhos": [
@@ -67,7 +426,128 @@
     { "id": 2, "idCarrinho": 2, "idProduto": 2, "quantidade": 2 },
     { "id": 3, "idCarrinho": 3, "idProduto": 3, "quantidade": 1 },
     { "id": 4, "idCarrinho": 4, "idProduto": 4, "quantidade": 1 },
-    { "id": 5, "idCarrinho": 5, "idProduto": 5, "quantidade": 3 }
+    { "id": 5, "idCarrinho": 5, "idProduto": 5, "quantidade": 3 },
+      {
+    "id": 6,
+    "idCarrinho": 1,
+    "idProduto": 6,
+    "quantidade": 2
+  },
+  {
+    "id": 7,
+    "idCarrinho": 1,
+    "idProduto": 7,
+    "quantidade": 1
+  },
+  {
+    "id": 8,
+    "idCarrinho": 2,
+    "idProduto": 8,
+    "quantidade": 1
+  },
+  {
+    "id": 9,
+    "idCarrinho": 2,
+    "idProduto": 9,
+    "quantidade": 1
+  },
+  {
+    "id": 10,
+    "idCarrinho": 3,
+    "idProduto": 10,
+    "quantidade": 1
+  },
+  {
+    "id": 11,
+    "idCarrinho": 3,
+    "idProduto": 11,
+    "quantidade": 2
+  },
+  {
+    "id": 12,
+    "idCarrinho": 4,
+    "idProduto": 12,
+    "quantidade": 1
+  },
+  {
+    "id": 13,
+    "idCarrinho": 4,
+    "idProduto": 13,
+    "quantidade": 1
+  },
+  {
+    "id": 14,
+    "idCarrinho": 2,
+    "idProduto": 14,
+    "quantidade": 1
+  },
+  {
+    "id": 15,
+    "idCarrinho": 5,
+    "idProduto": 15,
+    "quantidade": 2
+  },
+  {
+    "id": 16,
+    "idCarrinho": 3,
+    "idProduto": 1,
+    "quantidade": 1
+  },
+  {
+    "id": 17,
+    "idCarrinho": 5,
+    "idProduto": 3,
+    "quantidade": 2
+  },
+  {
+    "id": 18,
+    "idCarrinho": 3,
+    "idProduto": 2,
+    "quantidade": 1
+  },
+  {
+    "id": 19,
+    "idCarrinho": 1,
+    "idProduto": 6,
+    "quantidade": 1
+  },
+  {
+    "id": 20,
+    "idCarrinho": 1,
+    "idProduto": 5,
+    "quantidade": 1
+  },
+  {
+    "id": 21,
+    "idCarrinho": 1,
+    "idProduto": 12,
+    "quantidade": 2
+  },
+  {
+    "id": 22,
+    "idCarrinho": 3,
+    "idProduto": 4,
+    "quantidade": 1
+  },
+  {
+    "id": 23,
+    "idCarrinho": 2,
+    "idProduto": 10,
+    "quantidade": 1
+  },
+  {
+    "id": 24,
+    "idCarrinho": 5,
+    "idProduto": 8,
+    "quantidade": 1
+  },
+  {
+    "id": 25,
+    "idCarrinho": 4,
+    "idProduto": 14,
+    "quantidade": 1
+  }
+
   ],
 
   "cartoes": [
