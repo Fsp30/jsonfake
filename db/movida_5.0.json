@@ -83,9 +83,9 @@
         { "id": 2, "nome": "Seguro Completo", "descricao": "Cobertura total contra colisão, roubo e furto sem franquia", "valorDiaria": 45.00 }
     ],
     "multas": [
-        { "id": 1, "tipoMulta": "Atraso", "valor": 80.00, "descricao": "Atraso na devolução do veículo", "locacao": 1 },
-        { "id": 2, "tipoMulta": "Atraso", "valor": 80.00, "descricao": "Atraso na devolução do veículo", "locacao": 3 },
-        { "id": 3, "tipoMulta": "Infração de trânsito", "valor": 195.23, "descricao": "Excesso de velocidade registrado durante o período da locação", "locacao": 6 }
+        { "id": 1, "tipoMulta": "Atraso", "valor": 80.00, "descricao": "Atraso na devolução do veículo", "locacao": 1, "cliente": 2 },
+        { "id": 2, "tipoMulta": "Atraso", "valor": 80.00, "descricao": "Atraso na devolução do veículo", "locacao": 3, "cliente": 4 },
+        { "id": 3, "tipoMulta": "Infração de trânsito", "valor": 195.23, "descricao": "Excesso de velocidade registrado durante o período da locação", "locacao": 6, "cliente": 4 }
     ],
     "avaliacoes": [
         { "id": 1, "nota": 4, "comentario": "Bom atendimento, mas o carro tinha um pequeno arranhão.", "locacao": 1 },
