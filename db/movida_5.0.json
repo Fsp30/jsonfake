@@ -95,5 +95,10 @@
         { "id": 5, "nota": 4, "comentario": "Carro confortável, atendimento cordial.", "locacao": 5 },
         { "id": 6, "nota": 2, "comentario": "Tive uma multa inesperada durante o período da locação.", "locacao": 6 },
         { "id": 7, "nota": 5, "comentario": "Tudo correu perfeitamente, sem nenhum problema.", "locacao": 7 }
+    ],
+    "locais": [
+        { "id": 1, "nome": "Filial Centro", "cidade": "Juiz de Fora", "estado": "MG", "endereco": "Av. Barão do Rio Branco, 2500 - Centro", "cep": "36016-311", "telefone": "(32) 3215-1000" },
+        { "id": 2, "nome": "Filial Aeroporto", "cidade": "Juiz de Fora", "estado": "MG", "endereco": "Av. Prefeito Mello Reis, s/n - Aeroporto", "cep": "36033-560", "telefone": "(32) 3215-1001" },
+        { "id": 3, "nome": "Filial Zona Norte", "cidade": "Juiz de Fora", "estado": "MG", "endereco": "Av. Juscelino Kubitschek, 4500 - Benfica", "cep": "36090-000", "telefone": "(32) 3215-1002" }
     ]
 }
