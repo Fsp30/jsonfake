@@ -3011,7 +3011,9 @@
             "nome": "Filial Centro",
             "cidade": "Juiz de Fora",
             "estado": "MG",
-            "endereco": "Av. Barão do Rio Branco, 2500 - Centro",
+            "logradouro": "Av. Barão do Rio Branco",
+            "num": "2500",
+            "bairro": "Centro",
             "cep": "36016-311",
             "telefone": "(32) 3215-1000"
         },
@@ -3020,7 +3022,9 @@
             "nome": "Filial Aeroporto",
             "cidade": "Juiz de Fora",
             "estado": "MG",
-            "endereco": "Av. Prefeito Mello Reis, s/n - Aeroporto",
+            "logradouro": "Av. Prefeito Mello Reis",
+            "num": "100",
+            "bairro": "Aeroporto",
             "cep": "36033-560",
             "telefone": "(32) 3215-1001"
         },
@@ -3029,7 +3033,9 @@
             "nome": "Filial Zona Norte",
             "cidade": "Juiz de Fora",
             "estado": "MG",
-            "endereco": "Av. Juscelino Kubitschek, 4500 - Benfica",
+            "logradouro": "Av. Juscelino Kubitschek",
+            "num": "500",
+            "bairro": "Benfica",
             "cep": "36090-000",
             "telefone": "(32) 3215-1002"
         }
