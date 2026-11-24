@@ -321,7 +321,7 @@
     "condicao": "NOVO",
     "freteGratis": true,
     "status": "ATIVO",
-    "fotos": ["/images/kit-xeon.png"],
+    "fotos": ["/kit-xeon.png"],
     "notaMedia": 5.0,
     "percentualRecomendacao": 100.0,
     "dataCadastro": "2026-09-20"
@@ -341,7 +341,7 @@
     "condicao": "NOVO",
     "freteGratis": false,
     "status": "ATIVO",
-    "fotos": ["/images/rtx.png"],
+    "fotos": ["/rtx.png"],
     "notaMedia": 4.8,
     "percentualRecomendacao": 95.0,
     "dataCadastro": "2026-09-20"
@@ -361,7 +361,7 @@
     "condicao": "NOVO",
     "freteGratis": true,
     "status": "ATIVO",
-    "fotos": ["/images/flamengo.png"],
+    "fotos": ["/flamengo.png"],
     "notaMedia": 4.9,
     "percentualRecomendacao": 98.0,
     "dataCadastro": "2026-09-20"
@@ -381,7 +381,7 @@
     "condicao": "NOVO",
     "freteGratis": false,
     "status": "ATIVO",
-    "fotos": ["/images/game-boy.png"],
+    "fotos": ["/game-boy.png"],
     "notaMedia": 4.5,
     "percentualRecomendacao": 90.0,
     "dataCadastro": "2026-09-20"
@@ -401,7 +401,7 @@
     "condicao": "NOVO",
     "freteGratis": false,
     "status": "ATIVO",
-    "fotos": ["/images/bola.png"],
+    "fotos": ["/bola.png"],
     "notaMedia": 4.7,
     "percentualRecomendacao": 92.0,
     "dataCadastro": "2026-09-20"
@@ -421,7 +421,7 @@
     "condicao": "NOVO",
     "freteGratis": true,
     "status": "ATIVO",
-    "fotos": ["/images/ssd.png"],
+    "fotos": ["/ssd.png"],
     "notaMedia": 4.9,
     "percentualRecomendacao": 97,
     "dataCadastro": "2026-09-20"
@@ -441,7 +441,7 @@
     "condicao": "NOVO",
     "freteGratis": false,
     "status": "ATIVO",
-    "fotos": ["/images/memoria.png"],
+    "fotos": ["/memoria.png"],
     "notaMedia": 4.7,
     "percentualRecomendacao": 93,
     "dataCadastro": "2026-09-20"
@@ -461,7 +461,7 @@
     "condicao": "NOVO",
     "freteGratis": true,
     "status": "ATIVO",
-    "fotos": ["/images/fonte.png"],
+    "fotos": ["/fonte.png"],
     "notaMedia": 4.6,
     "percentualRecomendacao": 91,
     "dataCadastro": "2026-09-20"
@@ -481,7 +481,7 @@
     "condicao": "NOVO",
     "freteGratis": true,
     "status": "ATIVO",
-    "fotos": ["/images/corintians.png"],
+    "fotos": ["/corintians.png"],
     "notaMedia": 4.8,
     "percentualRecomendacao": 96,
     "dataCadastro": "2026-09-20"
@@ -501,7 +501,7 @@
     "condicao": "NOVO",
     "freteGratis": false,
     "status": "ATIVO",
-    "fotos": ["/images/megadrive.png"],
+    "fotos": ["/megadrive.png"],
     "notaMedia": 4.6,
     "percentualRecomendacao": 89,
     "dataCadastro": "2026-09-20"
@@ -521,7 +521,7 @@
     "condicao": "USADO",
     "freteGratis": false,
     "status": "ATIVO",
-    "fotos": ["/images/cartucho-mario.png"],
+    "fotos": ["/cartucho-mario.png"],
     "notaMedia": 4.4,
     "percentualRecomendacao": 85,
     "dataCadastro": "2026-09-20"
@@ -541,7 +541,7 @@
     "condicao": "NOVO",
     "freteGratis": true,
     "status": "ATIVO",
-    "fotos": ["/images/chuteira.png"],
+    "fotos": ["/chuteira.png"],
     "notaMedia": 4.5,
     "percentualRecomendacao": 88,
     "dataCadastro": "2026-09-20"
@@ -561,7 +561,7 @@
     "condicao": "NOVO",
     "freteGratis": true,
     "status": "ATIVO",
-    "fotos": ["/images/brasil.png"],
+    "fotos": ["/brasil.png"],
     "notaMedia": 4.9,
     "percentualRecomendacao": 98,
     "dataCadastro": "2026-09-20"
@@ -581,7 +581,7 @@
     "condicao": "NOVO",
     "freteGratis": false,
     "status": "ATIVO",
-    "fotos": ["/images/halter.png"],
+    "fotos": ["/halter.png"],
     "notaMedia": 4.7,
     "percentualRecomendacao": 94,
     "dataCadastro": "2026-09-20"
@@ -601,7 +601,7 @@
     "condicao": "NOVO",
     "freteGratis": false,
     "status": "ATIVO",
-    "fotos": ["/images/luva.png"],
+    "fotos": ["/luva.png"],
     "notaMedia": 4.3,
     "percentualRecomendacao": 84,
     "dataCadastro": "2026-09-20"
