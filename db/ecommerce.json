@@ -46,7 +46,7 @@
       "bairro": "Centro",
       "cidade": "Juiz de Fora",
       "uf": "MG",
-      "logoUrl": "",
+      "logoUrl": "./techCore.jpg",
       "descricao": "Componentes de hardware e periféricos",
       "status": "ATIVO",
       "statusVerificacao": "VERIFICADA"
