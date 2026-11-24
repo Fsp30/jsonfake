@@ -703,12 +703,9 @@
             "nome": "João Silva",
             "cpf": "123.456.789-01",
             "telefone": "(11) 91234-5678",
-            "cnh": {
-                "id": 1,
-                "numero": "12345678900",
-                "categoria": "B",
-                "validade": "2028-05-14"
-            }
+            "numeroCnh": "12345678900",
+            "categoriaCnh": "B",
+            "validadeCnh": "2028-05-14"
         },
         {
             "id": 2,
@@ -717,12 +714,9 @@
             "nome": "Maria Souza",
             "cpf": "234.567.890-12",
             "telefone": "(21) 92345-6789",
-            "cnh": {
-                "id": 2,
-                "numero": "23456789011",
-                "categoria": "B",
-                "validade": "2027-11-30"
-            }
+            "numeroCnh": "23456789011",
+            "categoriaCnh": "B",
+            "validadeCnh": "2027-11-30"
         },
         {
             "id": 3,
@@ -731,12 +725,9 @@
             "nome": "Pedro Santos",
             "cpf": "345.678.901-23",
             "telefone": "(31) 93456-7890",
-            "cnh": {
-                "id": 3,
-                "numero": "34567890122",
-                "categoria": "B",
-                "validade": "2026-08-22"
-            }
+            "numeroCnh": "34567890122",
+            "categoriaCnh": "B",
+            "validadeCnh": "2026-08-22"
         },
         {
             "id": 4,
@@ -745,38 +736,9 @@
             "nome": "Ana Oliveira",
             "cpf": "456.789.012-34",
             "telefone": "(41) 94567-8901",
-            "cnh": {
-                "id": 4,
-                "numero": "45678901233",
-                "categoria": "B",
-                "validade": "2029-02-09"
-            }
-        }
-    ],
-    "cnhs": [
-        {
-            "id": 1,
-            "numero": "12345678900",
-            "categoria": "B",
-            "validade": "2028-05-14"
-        },
-        {
-            "id": 2,
-            "numero": "23456789011",
-            "categoria": "B",
-            "validade": "2027-11-30"
-        },
-        {
-            "id": 3,
-            "numero": "34567890122",
-            "categoria": "B",
-            "validade": "2026-08-22"
-        },
-        {
-            "id": 4,
-            "numero": "45678901233",
-            "categoria": "B",
-            "validade": "2029-02-09"
+            "numeroCnh": "45678901233",
+            "categoriaCnh": "B",
+            "validadeCnh": "2029-02-09"
         }
     ],
     "locacoes": [
@@ -822,12 +784,9 @@
                 "nome": "João Silva",
                 "cpf": "123.456.789-01",
                 "telefone": "(11) 91234-5678",
-                "cnh": {
-                    "id": 1,
-                    "numero": "12345678900",
-                    "categoria": "B",
-                    "validade": "2028-05-14"
-                }
+                "numeroCnh": "12345678900",
+                "categoriaCnh": "B",
+                "validadeCnh": "2028-05-14"
             },
             "dataRetirada": "2026-09-10",
             "dataDevolucao": "2026-09-20",
@@ -863,12 +822,9 @@
                         "nome": "Maria Souza",
                         "cpf": "234.567.890-12",
                         "telefone": "(21) 92345-6789",
-                        "cnh": {
-                            "id": 2,
-                            "numero": "23456789011",
-                            "categoria": "B",
-                            "validade": "2027-11-30"
-                        }
+                        "numeroCnh": "23456789011",
+                        "categoriaCnh": "B",
+                        "validadeCnh": "2027-11-30"
                     }
                 }
             ],
@@ -925,12 +881,9 @@
                 "nome": "Maria Souza",
                 "cpf": "234.567.890-12",
                 "telefone": "(21) 92345-6789",
-                "cnh": {
-                    "id": 2,
-                    "numero": "23456789011",
-                    "categoria": "B",
-                    "validade": "2027-11-30"
-                }
+                "numeroCnh": "23456789011",
+                "categoriaCnh": "B",
+                "validadeCnh": "2027-11-30"
             },
             "dataRetirada": "2026-09-15",
             "dataDevolucao": "2026-09-25",
@@ -1009,12 +962,9 @@
                 "nome": "Pedro Santos",
                 "cpf": "345.678.901-23",
                 "telefone": "(31) 93456-7890",
-                "cnh": {
-                    "id": 3,
-                    "numero": "34567890122",
-                    "categoria": "B",
-                    "validade": "2026-08-22"
-                }
+                "numeroCnh": "34567890122",
+                "categoriaCnh": "B",
+                "validadeCnh": "2026-08-22"
             },
             "dataRetirada": "2026-09-05",
             "dataDevolucao": "2026-09-19",
@@ -1050,12 +1000,9 @@
                         "nome": "Ana Oliveira",
                         "cpf": "456.789.012-34",
                         "telefone": "(41) 94567-8901",
-                        "cnh": {
-                            "id": 4,
-                            "numero": "45678901233",
-                            "categoria": "B",
-                            "validade": "2029-02-09"
-                        }
+                        "numeroCnh": "45678901233",
+                        "categoriaCnh": "B",
+                        "validadeCnh": "2029-02-09"
                     }
                 }
             ],
@@ -1120,12 +1067,9 @@
                 "nome": "Ana Oliveira",
                 "cpf": "456.789.012-34",
                 "telefone": "(41) 94567-8901",
-                "cnh": {
-                    "id": 4,
-                    "numero": "45678901233",
-                    "categoria": "B",
-                    "validade": "2029-02-09"
-                }
+                "numeroCnh": "45678901233",
+                "categoriaCnh": "B",
+                "validadeCnh": "2029-02-09"
             },
             "dataRetirada": "2026-08-01",
             "dataDevolucao": "2026-08-10",
@@ -1196,12 +1140,9 @@
                 "nome": "João Silva",
                 "cpf": "123.456.789-01",
                 "telefone": "(11) 91234-5678",
-                "cnh": {
-                    "id": 1,
-                    "numero": "12345678900",
-                    "categoria": "B",
-                    "validade": "2028-05-14"
-                }
+                "numeroCnh": "12345678900",
+                "categoriaCnh": "B",
+                "validadeCnh": "2028-05-14"
             },
             "dataRetirada": "2026-07-05",
             "dataDevolucao": "2026-07-12",
@@ -1297,12 +1238,9 @@
                 "nome": "Maria Souza",
                 "cpf": "234.567.890-12",
                 "telefone": "(21) 92345-6789",
-                "cnh": {
-                    "id": 2,
-                    "numero": "23456789011",
-                    "categoria": "B",
-                    "validade": "2027-11-30"
-                }
+                "numeroCnh": "23456789011",
+                "categoriaCnh": "B",
+                "validadeCnh": "2027-11-30"
             },
             "dataRetirada": "2026-08-15",
             "dataDevolucao": "2026-08-22",
@@ -1333,12 +1271,9 @@
                         "nome": "Ana Oliveira",
                         "cpf": "456.789.012-34",
                         "telefone": "(41) 94567-8901",
-                        "cnh": {
-                            "id": 4,
-                            "numero": "45678901233",
-                            "categoria": "B",
-                            "validade": "2029-02-09"
-                        }
+                        "numeroCnh": "45678901233",
+                        "categoriaCnh": "B",
+                        "validadeCnh": "2029-02-09"
                     }
                 }
             ],
@@ -1419,12 +1354,9 @@
                 "nome": "Pedro Santos",
                 "cpf": "345.678.901-23",
                 "telefone": "(31) 93456-7890",
-                "cnh": {
-                    "id": 3,
-                    "numero": "34567890122",
-                    "categoria": "B",
-                    "validade": "2026-08-22"
-                }
+                "numeroCnh": "34567890122",
+                "categoriaCnh": "B",
+                "validadeCnh": "2026-08-22"
             },
             "dataRetirada": "2026-06-10",
             "dataDevolucao": "2026-06-18",
@@ -1504,12 +1436,9 @@
                     "nome": "João Silva",
                     "cpf": "123.456.789-01",
                     "telefone": "(11) 91234-5678",
-                    "cnh": {
-                        "id": 1,
-                        "numero": "12345678900",
-                        "categoria": "B",
-                        "validade": "2028-05-14"
-                    }
+                    "numeroCnh": "12345678900",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2028-05-14"
                 },
                 "dataRetirada": "2026-09-10",
                 "dataDevolucao": "2026-09-20",
@@ -1538,12 +1467,9 @@
                             "nome": "Maria Souza",
                             "cpf": "234.567.890-12",
                             "telefone": "(21) 92345-6789",
-                            "cnh": {
-                                "id": 2,
-                                "numero": "23456789011",
-                                "categoria": "B",
-                                "validade": "2027-11-30"
-                            }
+                            "numeroCnh": "23456789011",
+                            "categoriaCnh": "B",
+                            "validadeCnh": "2027-11-30"
                         }
                     }
                 ],
@@ -1607,12 +1533,9 @@
                     "nome": "Maria Souza",
                     "cpf": "234.567.890-12",
                     "telefone": "(21) 92345-6789",
-                    "cnh": {
-                        "id": 2,
-                        "numero": "23456789011",
-                        "categoria": "B",
-                        "validade": "2027-11-30"
-                    }
+                    "numeroCnh": "23456789011",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2027-11-30"
                 },
                 "dataRetirada": "2026-09-15",
                 "dataDevolucao": "2026-09-25",
@@ -1691,12 +1614,9 @@
                     "nome": "Pedro Santos",
                     "cpf": "345.678.901-23",
                     "telefone": "(31) 93456-7890",
-                    "cnh": {
-                        "id": 3,
-                        "numero": "34567890122",
-                        "categoria": "B",
-                        "validade": "2026-08-22"
-                    }
+                    "numeroCnh": "34567890122",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2026-08-22"
                 },
                 "dataRetirada": "2026-09-05",
                 "dataDevolucao": "2026-09-19",
@@ -1725,12 +1645,9 @@
                             "nome": "Ana Oliveira",
                             "cpf": "456.789.012-34",
                             "telefone": "(41) 94567-8901",
-                            "cnh": {
-                                "id": 4,
-                                "numero": "45678901233",
-                                "categoria": "B",
-                                "validade": "2029-02-09"
-                            }
+                            "numeroCnh": "45678901233",
+                            "categoriaCnh": "B",
+                            "validadeCnh": "2029-02-09"
                         }
                     }
                 ],
@@ -1802,12 +1719,9 @@
                     "nome": "Ana Oliveira",
                     "cpf": "456.789.012-34",
                     "telefone": "(41) 94567-8901",
-                    "cnh": {
-                        "id": 4,
-                        "numero": "45678901233",
-                        "categoria": "B",
-                        "validade": "2029-02-09"
-                    }
+                    "numeroCnh": "45678901233",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2029-02-09"
                 },
                 "dataRetirada": "2026-08-01",
                 "dataDevolucao": "2026-08-10",
@@ -1878,12 +1792,9 @@
                     "nome": "João Silva",
                     "cpf": "123.456.789-01",
                     "telefone": "(11) 91234-5678",
-                    "cnh": {
-                        "id": 1,
-                        "numero": "12345678900",
-                        "categoria": "B",
-                        "validade": "2028-05-14"
-                    }
+                    "numeroCnh": "12345678900",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2028-05-14"
                 },
                 "dataRetirada": "2026-07-05",
                 "dataDevolucao": "2026-07-12",
@@ -1979,12 +1890,9 @@
                     "nome": "Maria Souza",
                     "cpf": "234.567.890-12",
                     "telefone": "(21) 92345-6789",
-                    "cnh": {
-                        "id": 2,
-                        "numero": "23456789011",
-                        "categoria": "B",
-                        "validade": "2027-11-30"
-                    }
+                    "numeroCnh": "23456789011",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2027-11-30"
                 },
                 "dataRetirada": "2026-08-15",
                 "dataDevolucao": "2026-08-22",
@@ -2008,12 +1916,9 @@
                             "nome": "Ana Oliveira",
                             "cpf": "456.789.012-34",
                             "telefone": "(41) 94567-8901",
-                            "cnh": {
-                                "id": 4,
-                                "numero": "45678901233",
-                                "categoria": "B",
-                                "validade": "2029-02-09"
-                            }
+                            "numeroCnh": "45678901233",
+                            "categoriaCnh": "B",
+                            "validadeCnh": "2029-02-09"
                         }
                     }
                 ],
@@ -2101,12 +2006,9 @@
                     "nome": "Pedro Santos",
                     "cpf": "345.678.901-23",
                     "telefone": "(31) 93456-7890",
-                    "cnh": {
-                        "id": 3,
-                        "numero": "34567890122",
-                        "categoria": "B",
-                        "validade": "2026-08-22"
-                    }
+                    "numeroCnh": "34567890122",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2026-08-22"
                 },
                 "dataRetirada": "2026-06-10",
                 "dataDevolucao": "2026-06-18",
@@ -2193,12 +2095,9 @@
                     "nome": "João Silva",
                     "cpf": "123.456.789-01",
                     "telefone": "(11) 91234-5678",
-                    "cnh": {
-                        "id": 1,
-                        "numero": "12345678900",
-                        "categoria": "B",
-                        "validade": "2028-05-14"
-                    }
+                    "numeroCnh": "12345678900",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2028-05-14"
                 },
                 "dataRetirada": "2026-09-10",
                 "dataDevolucao": "2026-09-20",
@@ -2237,12 +2136,9 @@
                 "nome": "Maria Souza",
                 "cpf": "234.567.890-12",
                 "telefone": "(21) 92345-6789",
-                "cnh": {
-                    "id": 2,
-                    "numero": "23456789011",
-                    "categoria": "B",
-                    "validade": "2027-11-30"
-                }
+                "numeroCnh": "23456789011",
+                "categoriaCnh": "B",
+                "validadeCnh": "2027-11-30"
             }
         },
         {
@@ -2304,12 +2200,9 @@
                     "nome": "Pedro Santos",
                     "cpf": "345.678.901-23",
                     "telefone": "(31) 93456-7890",
-                    "cnh": {
-                        "id": 3,
-                        "numero": "34567890122",
-                        "categoria": "B",
-                        "validade": "2026-08-22"
-                    }
+                    "numeroCnh": "34567890122",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2026-08-22"
                 },
                 "dataRetirada": "2026-09-05",
                 "dataDevolucao": "2026-09-19",
@@ -2348,12 +2241,9 @@
                 "nome": "Ana Oliveira",
                 "cpf": "456.789.012-34",
                 "telefone": "(41) 94567-8901",
-                "cnh": {
-                    "id": 4,
-                    "numero": "45678901233",
-                    "categoria": "B",
-                    "validade": "2029-02-09"
-                }
+                "numeroCnh": "45678901233",
+                "categoriaCnh": "B",
+                "validadeCnh": "2029-02-09"
             }
         },
         {
@@ -2427,12 +2317,9 @@
                     "nome": "Maria Souza",
                     "cpf": "234.567.890-12",
                     "telefone": "(21) 92345-6789",
-                    "cnh": {
-                        "id": 2,
-                        "numero": "23456789011",
-                        "categoria": "B",
-                        "validade": "2027-11-30"
-                    }
+                    "numeroCnh": "23456789011",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2027-11-30"
                 },
                 "dataRetirada": "2026-08-15",
                 "dataDevolucao": "2026-08-22",
@@ -2466,12 +2353,9 @@
                 "nome": "Ana Oliveira",
                 "cpf": "456.789.012-34",
                 "telefone": "(41) 94567-8901",
-                "cnh": {
-                    "id": 4,
-                    "numero": "45678901233",
-                    "categoria": "B",
-                    "validade": "2029-02-09"
-                }
+                "numeroCnh": "45678901233",
+                "categoriaCnh": "B",
+                "validadeCnh": "2029-02-09"
             }
         }
     ],
@@ -2522,12 +2406,9 @@
                     "nome": "João Silva",
                     "cpf": "123.456.789-01",
                     "telefone": "(11) 91234-5678",
-                    "cnh": {
-                        "id": 1,
-                        "numero": "12345678900",
-                        "categoria": "B",
-                        "validade": "2028-05-14"
-                    }
+                    "numeroCnh": "12345678900",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2028-05-14"
                 },
                 "dataRetirada": "2026-09-10",
                 "dataDevolucao": "2026-09-20",
@@ -2563,12 +2444,9 @@
                             "nome": "Maria Souza",
                             "cpf": "234.567.890-12",
                             "telefone": "(21) 92345-6789",
-                            "cnh": {
-                                "id": 2,
-                                "numero": "23456789011",
-                                "categoria": "B",
-                                "validade": "2027-11-30"
-                            }
+                            "numeroCnh": "23456789011",
+                            "categoriaCnh": "B",
+                            "validadeCnh": "2027-11-30"
                         }
                     }
                 ],
@@ -2625,12 +2503,9 @@
                     "nome": "Maria Souza",
                     "cpf": "234.567.890-12",
                     "telefone": "(21) 92345-6789",
-                    "cnh": {
-                        "id": 2,
-                        "numero": "23456789011",
-                        "categoria": "B",
-                        "validade": "2027-11-30"
-                    }
+                    "numeroCnh": "23456789011",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2027-11-30"
                 },
                 "dataRetirada": "2026-09-15",
                 "dataDevolucao": "2026-09-25",
@@ -2709,12 +2584,9 @@
                     "nome": "Pedro Santos",
                     "cpf": "345.678.901-23",
                     "telefone": "(31) 93456-7890",
-                    "cnh": {
-                        "id": 3,
-                        "numero": "34567890122",
-                        "categoria": "B",
-                        "validade": "2026-08-22"
-                    }
+                    "numeroCnh": "34567890122",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2026-08-22"
                 },
                 "dataRetirada": "2026-09-05",
                 "dataDevolucao": "2026-09-19",
@@ -2750,12 +2622,9 @@
                             "nome": "Ana Oliveira",
                             "cpf": "456.789.012-34",
                             "telefone": "(41) 94567-8901",
-                            "cnh": {
-                                "id": 4,
-                                "numero": "45678901233",
-                                "categoria": "B",
-                                "validade": "2029-02-09"
-                            }
+                            "numeroCnh": "45678901233",
+                            "categoriaCnh": "B",
+                            "validadeCnh": "2029-02-09"
                         }
                     }
                 ],
@@ -2820,12 +2689,9 @@
                     "nome": "Ana Oliveira",
                     "cpf": "456.789.012-34",
                     "telefone": "(41) 94567-8901",
-                    "cnh": {
-                        "id": 4,
-                        "numero": "45678901233",
-                        "categoria": "B",
-                        "validade": "2029-02-09"
-                    }
+                    "numeroCnh": "45678901233",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2029-02-09"
                 },
                 "dataRetirada": "2026-08-01",
                 "dataDevolucao": "2026-08-10",
@@ -2896,12 +2762,9 @@
                     "nome": "João Silva",
                     "cpf": "123.456.789-01",
                     "telefone": "(11) 91234-5678",
-                    "cnh": {
-                        "id": 1,
-                        "numero": "12345678900",
-                        "categoria": "B",
-                        "validade": "2028-05-14"
-                    }
+                    "numeroCnh": "12345678900",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2028-05-14"
                 },
                 "dataRetirada": "2026-07-05",
                 "dataDevolucao": "2026-07-12",
@@ -2997,12 +2860,9 @@
                     "nome": "Maria Souza",
                     "cpf": "234.567.890-12",
                     "telefone": "(21) 92345-6789",
-                    "cnh": {
-                        "id": 2,
-                        "numero": "23456789011",
-                        "categoria": "B",
-                        "validade": "2027-11-30"
-                    }
+                    "numeroCnh": "23456789011",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2027-11-30"
                 },
                 "dataRetirada": "2026-08-15",
                 "dataDevolucao": "2026-08-22",
@@ -3033,12 +2893,9 @@
                             "nome": "Ana Oliveira",
                             "cpf": "456.789.012-34",
                             "telefone": "(41) 94567-8901",
-                            "cnh": {
-                                "id": 4,
-                                "numero": "45678901233",
-                                "categoria": "B",
-                                "validade": "2029-02-09"
-                            }
+                            "numeroCnh": "45678901233",
+                            "categoriaCnh": "B",
+                            "validadeCnh": "2029-02-09"
                         }
                     }
                 ],
@@ -3119,12 +2976,9 @@
                     "nome": "Pedro Santos",
                     "cpf": "345.678.901-23",
                     "telefone": "(31) 93456-7890",
-                    "cnh": {
-                        "id": 3,
-                        "numero": "34567890122",
-                        "categoria": "B",
-                        "validade": "2026-08-22"
-                    }
+                    "numeroCnh": "34567890122",
+                    "categoriaCnh": "B",
+                    "validadeCnh": "2026-08-22"
                 },
                 "dataRetirada": "2026-06-10",
                 "dataDevolucao": "2026-06-18",
