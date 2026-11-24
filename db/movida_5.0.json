@@ -2,19 +2,23 @@
     "categorias": [
         {
             "id": 1,
-            "nome": "SUV"
+            "nome": "SUV",
+            "valorDiaria": 150
         },
         {
             "id": 2,
-            "nome": "Sedã"
+            "nome": "Sedã",
+            "valorDiaria": 180
         },
         {
             "id": 3,
-            "nome": "Hatch"
+            "nome": "Hatch",
+            "valorDiaria": 120
         },
         {
             "id": 4,
-            "nome": "Picape"
+            "nome": "Picape",
+            "valorDiaria": 300
         }
     ],
     "caracteristicas": [
