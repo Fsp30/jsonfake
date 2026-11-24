@@ -322,7 +322,7 @@
                     "nome": "Ford"
                 }
             },
-            "cor": "Vermelho",
+            "cor": "Prata",
             "status": "disponível",
             "kmRodados": 30000,
             "placa": "CDE3F67",
@@ -341,7 +341,7 @@
                     "nome": "Trava elétrica"
                 }
             ],
-            "url": "https://cdn.autopapo.com.br/box/uploads/2019/08/29170622/ford-ka-se-at-732x488.jpg"
+            "url": "https://w7.pngwing.com/pngs/429/827/png-transparent-ford-ka-ford-ranger-car-ford-focus-ford-compact-car-sedan-car-thumbnail.png"
         },
         {
             "id": 4,
@@ -359,7 +359,7 @@
                     "nome": "Honda"
                 }
             },
-            "cor": "Preto",
+            "cor": "Cinza",
             "status": "disponível",
             "kmRodados": 8000,
             "placa": "DEF4G89",
@@ -402,7 +402,7 @@
                     "nome": "Câmera de ré"
                 }
             ],
-            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBUQId6n3ArnNKM28IyewveJRNVTP95ezFuQwTG1qkig&s=10"
+            "url": "https://di-uploads-pod21.dealerinspire.com/hendrickhondacharleston/uploads/2023/02/mlp-img-top-2023-civic-sedan-temp.png"
         },
         {
             "id": 5,
@@ -439,7 +439,7 @@
                     "nome": "Trava elétrica"
                 }
             ],
-            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR91CH62Mfa0QM7tWgzQPYGW4daZoODtwNI-RFAMWTAEg&s=10"
+            "url": "https://www.webmotors.com.br/imagens/prod/345043/CHEVROLET_ONIX_1.4_MPFI_LTZ_8V_FLEX_4P_AUTOMATICO_34504309120868863.png"
         },
         {
             "id": 6,
@@ -514,7 +514,7 @@
                     "nome": "Volkswagen"
                 }
             },
-            "cor": "Azul",
+            "cor": "Branco",
             "status": "disponível",
             "kmRodados": 12000,
             "placa": "GHI7J45",
@@ -545,7 +545,7 @@
                     "nome": "Central multimídia"
                 }
             ],
-            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU5u48c645u73aUI60ZfJxVXBNpkq2QQKntsOsPmT5Z9qciCgOUbDjGfY&s=10"
+            "url": "https://images-ext-1.discordapp.net/external/7OSXms6Y5Hv0uIo3m118OunoStY6rGe1J0QUPwbt-XQ/https/www.webmotors.com.br/imagens/prod/379948/VOLKSWAGEN_TCROSS_1.4_250_TSI_TOTAL_FLEX_EXTREME_AUTOMATICO_37994811260060469.webp?format=webp&width=768&height=573"
         },
         {
             "id": 8,
@@ -590,7 +590,7 @@
                     "nome": "Freios ABS"
                 }
             ],
-            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQahtdrG84j0921a2WQEOD2Fa5nSNRBCa2lNvSCsecU9A&s=10"
+            "url": "https://www.webmotors.com.br/imagens/prod/344508/FORD_RANGER_2.5_LIMITED_4X2_CD_16V_FLEX_4P_MANUAL_34450816391497059.png"
         },
         {
             "id": 9,
@@ -696,7 +696,7 @@
                     "nome": "Sensor de estacionamento"
                 }
             ],
-            "url": "https://production.autoforce.com/uploads/version/profile_image/7627/model_main_webp_comprar-at-1-0-turbo-pacote-rfa_b0b2cb75c7.png.webp"
+            "url": "https://www.daitan.com.br/img/modelos/hrv/touring/hrv-touring-branco-tafeta-solido-2026.png"
         }
     ],
     "clientes": [
