@@ -3043,5 +3043,10 @@
             "email": "pedro@email.com",
             "senha": "1234"
         }
-    ]
+    ],
+    "dashboard": {
+        "locacoesAtivas": 3,
+        "locacoesRealizadas": 7,
+        "rendaBruta": 500
+    }
 }
