@@ -322,7 +322,7 @@
                     "nome": "Ford"
                 }
             },
-            "cor": "Prata",
+            "cor": "Preto",
             "status": "disponível",
             "kmRodados": 30000,
             "placa": "CDE3F67",
@@ -341,7 +341,7 @@
                     "nome": "Trava elétrica"
                 }
             ],
-            "url": "https://w7.pngwing.com/pngs/429/827/png-transparent-ford-ka-ford-ranger-car-ford-focus-ford-compact-car-sedan-car-thumbnail.png"
+            "url": "https://www.webmotors.com.br/imagens/prod/347781/FORD_KA_1.5_TIVCT_FLEX_SE_SEDAN_AUTOMATICO_3477811148053170.webp"
         },
         {
             "id": 4,
@@ -651,7 +651,7 @@
                     "nome": "Câmera de ré"
                 }
             ],
-            "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcSGflk6tnA7J4TruAzsuVukAESox_RQrkUgc6mqFKQcXHBvdCghWH254X&s=10"
+            "url": "https://www.daitan.com.br/img/modelos/hrv/touring/hrv-touring-branco-tafeta-solido-2026.png"
         },
         {
             "id": 10,
@@ -696,7 +696,7 @@
                     "nome": "Sensor de estacionamento"
                 }
             ],
-            "url": "https://www.daitan.com.br/img/modelos/hrv/touring/hrv-touring-branco-tafeta-solido-2026.png"
+            "url": "https://production.autoforce.com/uploads/version/profile_image/7627/model_main_webp_comprar-at-1-0-turbo-pacote-rfa_b0b2cb75c7.png.webp"
         }
     ],
     "clientes": [
