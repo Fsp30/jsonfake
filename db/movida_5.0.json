@@ -3033,5 +3033,15 @@
             "cep": "36090-000",
             "telefone": "(32) 3215-1002"
         }
+    ],
+    "usuarios": [
+        {
+            "email": "ricardo@email.com",
+            "senha": "123"
+        },
+        {
+            "email": "pedro@email.com",
+            "senha": "1234"
+        }
     ]
 }
