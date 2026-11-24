@@ -2051,7 +2051,7 @@
         {
             "id": 1,
             "tipoMulta": "Atraso",
-            "valor": 80,
+            "valor": 80.00,
             "descricao": "Atraso na devolução do veículo",
             "locacao": {
                 "id": 1,
@@ -2144,7 +2144,7 @@
         {
             "id": 2,
             "tipoMulta": "Atraso",
-            "valor": 80,
+            "valor": 80.00,
             "descricao": "Atraso na devolução do veículo",
             "locacao": {
                 "id": 3,
